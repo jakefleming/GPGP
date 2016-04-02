@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#FC2BA0;}
+	.st3{fill:url(#SVGID_1_);}
+	.st4{fill:#520147;}
+	.st5{fill:#CC0072;}
+	.st6{fill:url(#SVGID_2_);}
+	.st7{fill:#05996D;}
+	.st8{fill:none;stroke:#77AFC7;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#A0CBDE;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st10{opacity:0.2;clip-path:url(#SVGID_4_);fill:#520147;}
+	.st11{fill:#A0CBDE;}
+	.st12{fill:none;stroke:#C8E9F7;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st13{fill:#C8E9F7;}
+	.st14{font-family:'MyriadPro-Regular';}
+	.st15{font-size:12px;}
+</style>
+<g id="Layer_1" class="st0">
+	<g class="st1">
+		<path class="st2" d="M28,68h-4c-2.2,0-4-1.8-4-4v-4c0-2.2,1.8-4,4-4h4V68z"/>
+		<path class="st2" d="M68,56h4c2.2,0,4,1.8,4,4v4c0,2.2-1.8,4-4,4h-4V56z"/>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="29.5895" y1="39.2749" x2="66.471" y2="76.1564">
+			<stop  offset="0" style="stop-color:#FFD287"/>
+			<stop  offset="0.1278" style="stop-color:#FEB18C"/>
+			<stop  offset="0.3357" style="stop-color:#FE8194"/>
+			<stop  offset="0.5333" style="stop-color:#FD5B99"/>
+			<stop  offset="0.7156" style="stop-color:#FC409E"/>
+			<stop  offset="0.8767" style="stop-color:#FC30A0"/>
+			<stop  offset="1" style="stop-color:#FC2AA1"/>
+		</linearGradient>
+		<path class="st3" d="M72,52v12c0,8.8-7.2,16-16,16H40c-8.8,0-16-7.2-16-16V52c0-7.3,7-20,24-20S72,44.3,72,52z"/>
+		<path class="st4" d="M48,96L48,96c-6.6,0-12-5.4-12-12V70c0-3.3,2.7-6,6-6h12c3.3,0,6,2.7,6,6v14C60,90.6,54.6,96,48,96z"/>
+		<circle class="st4" cx="38" cy="58" r="2"/>
+		<circle class="st4" cx="58" cy="58" r="2"/>
+		<path class="st5" d="M54,72H42c-1.1,0-2-0.9-2-2l0,0c0-1.1,0.9-2,2-2h12c1.1,0,2,0.9,2,2l0,0C56,71.1,55.1,72,54,72z"/>
+		<path class="st4" d="M24,56c2.2,0,4,1.8,4,4l0,0c0,4.4,3.6,8,8,8h4v24h-4c-6.6,0-12-5.4-12-12V56z"/>
+		<path class="st4" d="M72,56c-2.2,0-4,1.8-4,4l0,0c0,4.4-3.6,8-8,8h-4v24h4c6.6,0,12-5.4,12-12V56z"/>
+	</g>
+</g>
+<g id="seaweed">
+</g>
+<g id="bucket">
+	<path class="st8" d="M73,48c0.6,2.2,1,4.6,1,7c0,14.4-11.6,26-26,26S22,69.4,22,55c0-2.4,0.3-4.8,1-7"/>
+	<path class="st9" d="M55.1,80c-2.3,0.6-4.7,1-7.1,1c-2.5,0-4.9-0.3-7.2-1"/>
+	<g>
+		<defs>
+			<path id="SVGID_3_" d="M72,52v12c0,8.8-7.2,16-16,16H40c-8.8,0-16-7.2-16-16V52c0-7.3,7-20,24-20S72,44.3,72,52z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<ellipse style="opacity:0.2;clip-path:url(#SVGID_2_);fill:#520147;" cx="48" cy="49.5" rx="27" ry="6.5"/>
+	</g>
+	<ellipse class="st11" cx="48" cy="46.5" rx="27" ry="6.5"/>
+	<polygon class="st11" points="28,9.5 24.1,45.5 72,45.5 68,9.5 	"/>
+	<line class="st12" x1="67.3" y1="21.9" x2="66.5" y2="14.7"/>
+	<line class="st12" x1="68.1" y1="29.3" x2="67.7" y2="26"/>
+	<ellipse class="st13" cx="48" cy="9.5" rx="20" ry="3.5"/>
+</g>
+<g id="nyt_x5F_exporter_x5F_info" class="st0">
+	<text transform="matrix(1 0 0 1 -96 0)" class="st1"><tspan x="0" y="0" class="st14 st15">&lt;nyt_prefs&gt;</tspan><tspan x="0" y="14.4" class="st14 st15">  &lt;nyt_prefix&gt;hat-&lt;/nyt_prefix&gt;</tspan><tspan x="0" y="28.8" class="st14 st15">  &lt;nyt_suffix&gt;&lt;/nyt_suffix&gt;</tspan><tspan x="0" y="43.2" class="st14 st15">  &lt;nyt_base_path&gt;~/Dropbox/gpgpPlayground/app/assets/img/wearables/hats&lt;/nyt_base_path&gt;</tspan><tspan x="0" y="57.6" class="st14 st15">  &lt;nyt_scaling&gt;200&lt;/nyt_scaling&gt;</tspan><tspan x="0" y="72" class="st14 st15">  &lt;nyt_transparency&gt;true&lt;/nyt_transparency&gt;</tspan><tspan x="0" y="86.4" class="st14 st15">  &lt;nyt_format&gt;PNG 24&lt;/nyt_format&gt;</tspan><tspan x="0" y="100.8" class="st14 st15">  &lt;nyt_export_code&gt;artboards&lt;/nyt_export_code&gt;</tspan><tspan x="0" y="115.2" class="st14 st15">&lt;/nyt_prefs&gt;</tspan></text>
+</g>
+</svg>
