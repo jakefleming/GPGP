@@ -547,9 +547,27 @@ body {
 .raft {
   position: relative; }
 
+.object-container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1; }
+  .object-container--sm {
+    height: 48px;
+    width: 48px; }
+  .object-container--lg {
+    height: 128px;
+    width: 128px; }
+  .object-container img {
+    max-width: 100%; }
+
+.object {
+  position: relative; }
+
 .animated {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: ease-in-out;
@@ -571,6 +589,28 @@ body {
             transform: translate(0, 4px) rotate(-1deg); } }
 
 @keyframes raft-bob {
+  0% {
+    -webkit-transform: translate(0, 4px) rotate(-1deg);
+            transform: translate(0, 4px) rotate(-1deg); }
+  50% {
+    -webkit-transform: translate(0, -4px) rotate(1deg);
+            transform: translate(0, -4px) rotate(1deg); }
+  100% {
+    -webkit-transform: translate(0, 4px) rotate(-1deg);
+            transform: translate(0, 4px) rotate(-1deg); } }
+
+@-webkit-keyframes object-bob {
+  0% {
+    -webkit-transform: translate(0, 4px) rotate(-1deg);
+            transform: translate(0, 4px) rotate(-1deg); }
+  50% {
+    -webkit-transform: translate(0, -4px) rotate(1deg);
+            transform: translate(0, -4px) rotate(1deg); }
+  100% {
+    -webkit-transform: translate(0, 4px) rotate(-1deg);
+            transform: translate(0, 4px) rotate(-1deg); } }
+
+@keyframes object-bob {
   0% {
     -webkit-transform: translate(0, 4px) rotate(-1deg);
             transform: translate(0, 4px) rotate(-1deg); }
@@ -642,6 +682,8 @@ body {
           animation-name: bob; }
 
 .raft-bob {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-name: raft-bob;
           animation-name: raft-bob; }
   .raft-bob .character__torso {
@@ -666,3 +708,21 @@ body {
             animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
+
+.object-bob-1 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
+
+.object-bob-2 {
+  -webkit-animation-duration: 4.2s;
+          animation-duration: 4.2s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
+
+.object-bob-3 {
+  -webkit-animation-duration: 3.8s;
+          animation-duration: 3.8s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
