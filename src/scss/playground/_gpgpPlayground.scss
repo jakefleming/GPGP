@@ -113,7 +113,6 @@ body {
 
 //setting up objects for testing
 .object-container {
-
   left: 50%;
   position: absolute;
   top: 50%;
@@ -140,6 +139,13 @@ body {
   //making sure images don't go outside their containers
   img {
     max-width: 100%;
+    transition: 1s all;
+  }
+  &:hover {
+    cursor: pointer;
+    img {
+      filter: brightness(1.5) drop-shadow(0px 0px 8px white);
+    }
   }
 }
 .object {
@@ -172,15 +178,15 @@ body {
 
 @keyframes object-bob {
   0% {
-    transform: translate(0, 4px) rotate(-1deg);
+    transform: translate(1px, 4px) rotate(-1deg);
   }
 
   50% {
-    transform: translate(0, -4px) rotate(1deg);
+    transform: translate(-1px, -4px) rotate(1deg);
   }
 
   100% {
-    transform: translate(0, 4px) rotate(-1deg);
+    transform: translate(1px, 4px) rotate(-1deg);
   }
 }
 
