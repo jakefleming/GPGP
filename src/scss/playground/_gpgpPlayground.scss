@@ -148,8 +148,29 @@ body {
     }
   }
 }
+
+@keyframes sparkle {
+  100% {background-position: 300% 100%}
+}
+
 .object {
   position: relative;
+  &--new {
+    &:before {
+      animation: sparkle .36s steps(3) infinite;
+      background-image: url(../../assets/img/fx/sparkle.svg);
+      background-position: top left;
+      background-size: 400%;
+      content: '';
+      height: 32px;
+      left: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: -32px;
+      transform: translateX(-50%);
+      width: 32px;
+    }
+  }
 }
 
 //setting up animations for raft

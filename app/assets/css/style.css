@@ -637,8 +637,32 @@ body {
       -webkit-filter: brightness(1.5) drop-shadow(0px 0px 8px white);
               filter: brightness(1.5) drop-shadow(0px 0px 8px white); }
 
+@-webkit-keyframes sparkle {
+  100% {
+    background-position: 300% 100%; } }
+
+@keyframes sparkle {
+  100% {
+    background-position: 300% 100%; } }
+
 .object {
   position: relative; }
+  .object--new:before {
+    -webkit-animation: sparkle 0.36s steps(3) infinite;
+            animation: sparkle 0.36s steps(3) infinite;
+    background-image: url(../../assets/img/fx/sparkle.svg);
+    background-position: top left;
+    background-size: 400%;
+    content: '';
+    height: 32px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -32px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 32px; }
 
 .animated {
   -webkit-animation-fill-mode: both;
