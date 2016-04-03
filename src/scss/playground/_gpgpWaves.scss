@@ -13,7 +13,6 @@
 .wave {
   height: 2px;
   border-radius: 2px;
-  background: lighten( rgba(106, 236, 250, .3), 10% );
   width: $wave-scale;
   margin-bottom: $wave-height;
   display: inline-block;
@@ -21,26 +20,31 @@
   &.a {
     width: $wave-scale * 4;
     margin-bottom: $wave-height * 2;
+    background: rgba(106, 236, 250, .4);
   }
 
   &.b {
     width: $wave-scale;
     margin-bottom: $wave-height * 2;
+    background: darken( rgba(106, 236, 250, .4), 20% );
   }
 
   &.c {
     width: $wave-scale * 3;
     margin-bottom: $wave-height * 3;
+    background: darken( rgba(106, 236, 250, .4), 10% );
   }
 
   &.d {
     width: $wave-scale;
     margin-bottom: $wave-height * 2;
+    background: lighten( rgba(106, 236, 250, .4), 20% );
   }
 
   &.e {
     width: $wave-scale * 2;
     margin-bottom: $wave-height;
+    background: lighten( rgba(106, 236, 250, .4), 10% );
   }
 }
 

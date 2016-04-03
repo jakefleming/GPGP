@@ -467,25 +467,29 @@ th {
 .wave {
   height: 2px;
   border-radius: 2px;
-  background: rgba(155, 242, 252, 0.3);
   width: 16px;
   margin-bottom: 24px;
   display: inline-block; }
   .wave.a {
     width: 64px;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    background: rgba(106, 236, 250, 0.4); }
   .wave.b {
     width: 16px;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    background: rgba(8, 223, 246, 0.4); }
   .wave.c {
     width: 48px;
-    margin-bottom: 72px; }
+    margin-bottom: 72px;
+    background: rgba(57, 230, 248, 0.4); }
   .wave.d {
     width: 16px;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    background: rgba(205, 249, 253, 0.4); }
   .wave.e {
     width: 32px;
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    background: rgba(155, 242, 252, 0.4); }
 
 @-webkit-keyframes wave-bob {
   0% {
