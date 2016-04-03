@@ -1,3 +1,10 @@
 $base : #F7F6F0;
 $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
+
+$scale:       1.5;
+$base-font:   16px;
+$base-lh:     $base-font * $scale;
+
+$wave-height: $base-lh;
+$wave-scale:  $base-font;

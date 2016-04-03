@@ -113,7 +113,7 @@ body {
 
 //setting up objects for testing
 .object-container {
-  
+
   left: 50%;
   position: absolute;
   top: 50%;
@@ -146,7 +146,7 @@ body {
   position: relative;
 }
 
-//setting up animations for raft 
+//setting up animations for raft
 .animated {
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -160,11 +160,11 @@ body {
   0% {
     transform: translate(0, 4px) rotate(-1deg);
   }
-  
+
   50% {
     transform: translate(0, -4px) rotate(1deg);
   }
-  
+
   100% {
     transform: translate(0, 4px) rotate(-1deg);
   }
@@ -174,11 +174,11 @@ body {
   0% {
     transform: translate(0, 4px) rotate(-1deg);
   }
-  
+
   50% {
     transform: translate(0, -4px) rotate(1deg);
   }
-  
+
   100% {
     transform: translate(0, 4px) rotate(-1deg);
   }
@@ -188,11 +188,11 @@ body {
   0% {
     transform: translateX(-50%) rotate(1deg);
   }
-  
+
   50% {
     transform: translateX(-50%) rotate(-1deg);
   }
-  
+
   100% {
     transform: translateX(-50%) rotate(1deg);
   }
@@ -202,7 +202,7 @@ body {
   0% {
     transform: translateX(-50%) rotate(-1deg);
   }
-  
+
   25% {
     transform: translateX(-50%) rotate(1deg);
   }
@@ -212,7 +212,7 @@ body {
   75% {
     transform: translateX(-50%) rotate(1deg);
   }
-  
+
   100% {
     transform: translateX(-50%) rotate(-1deg);
   }
@@ -225,6 +225,8 @@ body {
 .raft-bob {
   animation-duration: 4s;
   animation-name: raft-bob;
+  animation-delay: 2s;
+
   .character__torso {
     animation-name: character-sway;
     animation-duration: 5s;
@@ -253,4 +255,3 @@ body {
   animation-duration: 3.8s;
   animation-name: object-bob;
 }
-

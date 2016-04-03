@@ -22,6 +22,13 @@ var banner = [
   '\n'
 ].join('');
 
+var config = {
+  jsPaths: [
+    'src/js/velocity.min.js',
+    'src/js/scripts.js'
+  ]
+};
+
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
     .pipe(sass({errLogToConsole: true}))
@@ -35,7 +42,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('js',function(){
-  gulp.src('src/js/scripts.js')
+  gulp.src( config.jsPaths )
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))

@@ -16,6 +16,9 @@ html {
   font-size: 62.5%;
   background: radial-gradient(ellipse at center, #F7F6F0 0, #c2ba8c 80%, #b0a66b 100%); }
 
+body {
+  font-size: 16px; }
+
 body, html {
   min-height: 100vh;
   overflow: hidden; }
@@ -450,6 +453,66 @@ th {
   h3 {
     page-break-after: avoid; } }
 
+.wave-container {
+  height: 100vh;
+  width: 100vh;
+  overflow: hidden; }
+
+.wave-group {
+  width: 112px;
+  position: absolute;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s; }
+
+.wave {
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(155, 242, 252, 0.3);
+  width: 16px;
+  margin-bottom: 24px;
+  display: inline-block; }
+  .wave.a {
+    width: 64px;
+    margin-bottom: 48px; }
+  .wave.b {
+    width: 16px;
+    margin-bottom: 48px; }
+  .wave.c {
+    width: 48px;
+    margin-bottom: 72px; }
+  .wave.d {
+    width: 16px;
+    margin-bottom: 48px; }
+  .wave.e {
+    width: 32px;
+    margin-bottom: 24px; }
+
+@-webkit-keyframes wave-bob {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-2deg);
+            transform: translate(0, 0) rotate(-2deg); }
+  50% {
+    -webkit-transform: translate(0, -6px) rotate(2deg);
+            transform: translate(0, -6px) rotate(2deg); }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-2deg);
+            transform: translate(0, 0) rotate(-2deg); } }
+
+@keyframes wave-bob {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-2deg);
+            transform: translate(0, 0) rotate(-2deg); }
+  50% {
+    -webkit-transform: translate(0, -6px) rotate(2deg);
+            transform: translate(0, -6px) rotate(2deg); }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-2deg);
+            transform: translate(0, 0) rotate(-2deg); } }
+
+.wave-bob {
+  -webkit-animation-name: wave-bob;
+          animation-name: wave-bob; }
+
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
   background: #46afdb;
@@ -685,7 +748,9 @@ body {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
   -webkit-animation-name: raft-bob;
-          animation-name: raft-bob; }
+          animation-name: raft-bob;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
   .raft-bob .character__torso {
     -webkit-animation-name: character-sway;
             animation-name: character-sway;
