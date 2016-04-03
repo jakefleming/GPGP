@@ -14,6 +14,15 @@
     return Math.floor( Math.random() * ( max - min + 1) + min );
   };
 
+  var randoRange = function( min, max, minLimit, maxLimit ) {
+    do {
+      var roll = rando(min, max);
+    }
+    while( roll > minLimit && roll < maxLimit );
+
+    return roll;
+  };
+
   var distributeWaves = function() {
 
     var waveMultiplier = 6;
@@ -45,9 +54,47 @@
     }
   };
 
+  var distributeObjectsVertically = function() {
+    $('.object-container').each(function (index, value) {
+      var top = randoRange(10, 90, 38, 68) + 'vh';
+
+      $(this).css({ 'top': top });
+    });
+
+    return false;
+  };
+
+  var moveObjects = function() {
+    distributeObjectsVertically();
+    console.log('moving...');
+
+    // $('.object-container').each(function( index, value ) {
+    //   var floatSpeed = rando(1000, 5000);
+    //
+    //   $(this).velocity({
+    //     left: "-= 50"
+    //   }, 1000, function() {
+    //     // need to loop back to the beginning
+    //   });
+    // });
+  };
+
+  var resetObjects = function() {
+    // $('.object-container').css({ 'left': '120vw' });
+
+    // for dev purposes:
+    $('.object-container').each(function (index, value) {
+      var left = randoRange(10, 90, 38, 68) + 'vw';
+      $(this).css({ 'left': left });
+    });
+
+    moveObjects();
+  };
+
   $(function () {
     // yay
     distributeWaves();
+    resetObjects();
   });
 
   $(document).ready(function() {
