@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 29" style="enable-background:new 0 0 36 29;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BAE3E2;}
+	.st1{fill:#FC3C9E;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:url(#SVGID_3_);}
+	.st5{fill:url(#SVGID_4_);}
+	.st6{fill:none;stroke:url(#SVGID_5_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:url(#SVGID_6_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:url(#SVGID_7_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:url(#SVGID_8_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:url(#SVGID_9_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<circle class="st0" cx="3" cy="6" r="3"/>
+		<circle class="st0" cx="8.5" cy="4.5" r="4.5"/>
+		<rect x="3" y="6" class="st0" width="5.5" height="3"/>
+	</g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7" y1="12" x2="29" y2="12">
+		<stop  offset="0" style="stop-color:#AE46DB"/>
+		<stop  offset="0.3227" style="stop-color:#C443CA"/>
+		<stop  offset="0.99" style="stop-color:#FB3C9F"/>
+		<stop  offset="1" style="stop-color:#FC3C9E"/>
+	</linearGradient>
+	<path class="st2" d="M29,10c0-5.5-4.5-10-10-10S9,4.5,9,10l-2,7h3v5h3v2h13v-2v-4.9C27.8,15.3,29,12.8,29,10z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="15.5" y1="19.25" x2="15.5" y2="1.75">
+		<stop  offset="0.2002" style="stop-color:#CCF0EF"/>
+		<stop  offset="0.2493" style="stop-color:#DAF4F3"/>
+		<stop  offset="0.3342" style="stop-color:#EBF9F9"/>
+		<stop  offset="0.4399" style="stop-color:#F6FCFC"/>
+		<stop  offset="0.5882" style="stop-color:#FDFEFE"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path style="fill:none;stroke:url(#SVGID_2_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;" d="M19.5,18.5
+		c-4.4,0-8-3.6-8-8s3.6-8,8-8"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="22.75" y1="16.25" x2="22.75" y2="1.75">
+		<stop  offset="0.2002" style="stop-color:#CCF0EF"/>
+		<stop  offset="0.2493" style="stop-color:#DAF4F3"/>
+		<stop  offset="0.3342" style="stop-color:#EBF9F9"/>
+		<stop  offset="0.4399" style="stop-color:#F6FCFC"/>
+		<stop  offset="0.5882" style="stop-color:#FDFEFE"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path style="fill:none;stroke:url(#SVGID_3_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;" d="M19.5,2.5
+		C23.1,2.5,26,5.4,26,9s-2.9,6.5-6.5,6.5"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="17" y1="16.25" x2="17" y2="4.75">
+		<stop  offset="0.2002" style="stop-color:#CCF0EF"/>
+		<stop  offset="0.2493" style="stop-color:#DAF4F3"/>
+		<stop  offset="0.3342" style="stop-color:#EBF9F9"/>
+		<stop  offset="0.4399" style="stop-color:#F6FCFC"/>
+		<stop  offset="0.5882" style="stop-color:#FDFEFE"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path style="fill:none;stroke:url(#SVGID_4_);stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;" d="M19.5,15.5
+		c-2.8,0-5-2.2-5-5s2.2-5,5-5"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="21.25" y1="13.25" x2="21.25" y2="4.75">
+		<stop  offset="0.2002" style="stop-color:#CCF0EF"/>
+		<stop  offset="0.2493" style="stop-color:#DAF4F3"/>
+		<stop  offset="0.3342" style="stop-color:#EBF9F9"/>
+		<stop  offset="0.4399" style="stop-color:#F6FCFC"/>
+		<stop  offset="0.5882" style="stop-color:#FDFEFE"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path class="st6" d="M19.5,5.5C21.4,5.5,23,7.1,23,9s-1.6,3.5-3.5,3.5"/>
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="18.5" y1="13.25" x2="18.5" y2="7.75">
+		<stop  offset="0.2002" style="stop-color:#CCF0EF"/>
+		<stop  offset="0.2493" style="stop-color:#DAF4F3"/>
+		<stop  offset="0.3342" style="stop-color:#EBF9F9"/>
+		<stop  offset="0.4399" style="stop-color:#F6FCFC"/>
+		<stop  offset="0.5882" style="stop-color:#FDFEFE"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path class="st7" d="M19.5,12.5c-1.1,0-2-0.9-2-2s0.9-2,2-2"/>
+	<g>
+		<circle class="st0" cx="26" cy="18" r="3"/>
+		<circle class="st0" cx="31.5" cy="16.5" r="4.5"/>
+		<rect x="26" y="18" class="st0" width="5.5" height="3"/>
+	</g>
+</g>
+</svg>
