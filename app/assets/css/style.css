@@ -859,12 +859,23 @@ body {
     background-image: url(../../assets/img/ui/icons/icon_sanity.svg); }
 
 .atmosphere-overlay {
-  display: none;
   position: absolute;
   z-index: 8;
   width: 100vw;
   height: 100vh;
   pointer-events: none; }
-  .atmosphere-overlay--night {
-    display: block;
-    mix-blend-mode: multiply; }
+
+.night .atmosphere-overlay {
+  mix-blend-mode: darken;
+  opacity: 0.5;
+  background-image: linear-gradient(#9C079E 0%, #110B59 100%); }
+
+.sunset .atmosphere-overlay {
+  mix-blend-mode: color;
+  opacity: 0.9;
+  background-image: linear-gradient(#FF804E 0%, #8C009A 100%); }
+
+.day .atmosphere-overlay {
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  background-image: linear-gradient(#65FF96 0%, #FFFB09 100%); }
