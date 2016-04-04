@@ -360,10 +360,10 @@ body {
 
 .day {
   .atmosphere-overlay {
-    mix-blend-mode: screen;
-    opacity: 0.5;
-    background-image: -webkit-linear-gradient(#65FF96 0%, #FFFB09 100%);
-    background-image: -o-linear-gradient(#65FF96 0%, #FFFB09 100%);
-    background-image: linear-gradient(#65FF96 0%, #FFFB09 100%);
+    // mix-blend-mode: screen;
+    // opacity: 0.5;
+    // background-image: -webkit-linear-gradient(#65FF96 0%, #FFFB09 100%);
+    // background-image: -o-linear-gradient(#65FF96 0%, #FFFB09 100%);
+    // background-image: linear-gradient(#65FF96 0%, #FFFB09 100%);
   }
 }
