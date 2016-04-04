@@ -84,7 +84,6 @@
   };
 
   $(function () {
-    // yay
     distributeWaves();
     resetObjects();
 
