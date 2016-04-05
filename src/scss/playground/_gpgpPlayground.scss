@@ -4,6 +4,38 @@ body {
   background:linear-gradient(to bottom,#46afdb 0,#59f0e8 100%);
 }
 
+.pause-animation {
+  * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  &--btn:hover {
+    opacity: 1;
+  }
+}
+
+.dev-mode {
+  display: none;
+  
+  span,
+  a {
+    padding: 1rem 0 1rem 1rem;
+    color: #fff;
+    z-index: 1000;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1px;
+  }
+}
+
 //setting up the character
 .character {
   //background: red;
@@ -192,21 +224,21 @@ body {
 
 @keyframes character-head-sway {
   0% {
-    transform: translate(-50%, 0) rotate(5deg);
+    transform: translate(-50%, 0) rotate(3deg);
   }
 
   25% {
     transform: translate(-50%, 1px) rotate(-2deg);
   }
   50% {
-    transform: translate(-50%, 0) rotate(5deg);
+    transform: translate(-50%, 0) rotate(3deg);
   }
   75% {
     transform: translate(-50%, 1px) rotate(-2deg);
   }
 
   100% {
-    transform: translate(-50%, 0) rotate(5deg);
+    transform: translate(-50%, 0) rotate(3deg);
   }
 }
 

@@ -117,4 +117,10 @@ var objects = ( function($) {
   waves.spreadWaves();
   objects.spreadObjects();
 
+  // Events
+
+  $( '.pause-animation--btn' ).click( function() {
+    $( 'body' ).toggleClass( 'pause-animation' );
+  });
+
 })(jQuery, window, document);
