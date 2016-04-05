@@ -192,21 +192,21 @@ body {
 
 @keyframes character-head-sway {
   0% {
-    transform: translateX(-50%) rotate(-1deg);
+    transform: translate(-50%, 0) rotate(4deg);
   }
 
   25% {
-    transform: translateX(-50%) rotate(1deg);
+    transform: translate(-50%, 2px) rotate(-2deg);
   }
   50% {
-    transform: translateX(-50%) rotate(-1deg);
+    transform: translate(-50%, 0) rotate(4deg);
   }
   75% {
-    transform: translateX(-50%) rotate(1deg);
+    transform: translate(-50%, 2px) rotate(-2deg);
   }
 
   100% {
-    transform: translateX(-50%) rotate(-1deg);
+    transform: translate(-50%, 0) rotate(4deg);
   }
 }
 

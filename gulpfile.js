@@ -26,7 +26,7 @@ var config = {
   jsPaths: [
     'src/js/underscore-min.js',
     'src/js/velocity.min.js',
-    'src/js/scripts.js'
+    'src/js/**/*'
   ]
 };
 
