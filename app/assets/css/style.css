@@ -614,29 +614,6 @@ body {
 .raft {
   position: relative; }
 
-.object-container {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1; }
-  .object-container--sm {
-    height: 48px;
-    width: 48px; }
-  .object-container--lg {
-    height: 128px;
-    width: 128px; }
-  .object-container img {
-    max-width: 100%;
-    transition: 1s all; }
-  .object-container:hover {
-    cursor: pointer; }
-    .object-container:hover img {
-      -webkit-filter: brightness(1.5) drop-shadow(0px 0px 8px white);
-              filter: brightness(1.5) drop-shadow(0px 0px 8px white); }
-
 @-webkit-keyframes sparkle {
   100% {
     background-position: 300% 100%; } }
@@ -645,24 +622,22 @@ body {
   100% {
     background-position: 300% 100%; } }
 
-.object {
-  position: relative; }
-  .object--new:before {
-    -webkit-animation: sparkle 0.36s steps(3) infinite;
-            animation: sparkle 0.36s steps(3) infinite;
-    background-image: url(../../assets/img/fx/sparkle.svg);
-    background-position: top left;
-    background-size: 400%;
-    content: '';
-    height: 32px;
-    left: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: -32px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 32px; }
+.object--new:before {
+  -webkit-animation: sparkle 0.36s steps(3) infinite;
+          animation: sparkle 0.36s steps(3) infinite;
+  background-image: url(../../assets/img/fx/sparkle.svg);
+  background-position: top left;
+  background-size: 400%;
+  content: '';
+  height: 32px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -32px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 32px; }
 
 .animated {
   -webkit-animation-fill-mode: both;
@@ -865,12 +840,180 @@ body {
   height: 100vh;
   pointer-events: none; }
 
-.night .atmosphere-overlay {
-  mix-blend-mode: darken;
-  opacity: 0.5;
-  background-image: linear-gradient(#9C079E 0%, #110B59 100%); }
+.object-container {
+  background-size: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1; }
+  .object-container--sm {
+    height: 48px;
+    width: 48px; }
+    .object-container--sm .object, .object-container--sm .object-submerged {
+      height: 48px;
+      width: 48px; }
+  .object-container--lg {
+    height: 128px;
+    width: 128px; }
+    .object-container--lg .object, .object-container--lg .object-submerged {
+      height: 128px;
+      width: 128px; }
+  .object-container .object-submerged, .object-container .object {
+    transition: 1s all; }
+  .object-container:hover {
+    cursor: pointer; }
+    .object-container:hover .object {
+      -webkit-filter: brightness(1.5) drop-shadow(0px 0px 8px white);
+              filter: brightness(1.5) drop-shadow(0px 0px 8px white); }
+    .object-container:hover .object-submerged {
+      -webkit-filter: grayscale(0%) opacity(0.5) brightness(2) drop-shadow(0px 0px 8px white);
+              filter: grayscale(0%) opacity(0.5) brightness(2) drop-shadow(0px 0px 8px white); }
+    .object-container:hover .object-shadow {
+      background-color: white;
+      box-shadow: 0 0 16px 16px white; }
 
-.sunset .atmosphere-overlay {
-  mix-blend-mode: color;
-  opacity: 0.9;
-  background-image: linear-gradient(#FF804E 0%, #8C009A 100%); }
+.object-submerged-mask-container {
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+
+.object, .object-shadow, .object-submerged-mask-container, .object-mask-container {
+  position: absolute; }
+
+.object {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 0; }
+
+.object-shadow {
+  width: 100%;
+  height: 10%;
+  background: #1EB9D4;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  mix-blend-mode: multiply;
+  z-index: 2;
+  opacity: .5;
+  transition: 1s all; }
+
+.object-submerged-mask-container {
+  height: 50%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden; }
+
+.object-submerged {
+  background-size: cover;
+  background-position: bottom center;
+  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0px 0px 0px white);
+          filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0px 0px 0px white);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  bottom: 0; }
+
+.object-mask-container {
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden; }
+
+.object {
+  background-size: cover;
+  background-position: top center;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 0; }
+
+@-webkit-keyframes object-container-bob {
+  0% {
+    -webkit-transform: translate(1px, 4px) rotate(-1deg);
+            transform: translate(1px, 4px) rotate(-1deg); }
+  50% {
+    -webkit-transform: translate(-1px, -4px) rotate(1deg);
+            transform: translate(-1px, -4px) rotate(1deg); }
+  100% {
+    -webkit-transform: translate(1px, 4px) rotate(-1deg);
+            transform: translate(1px, 4px) rotate(-1deg); } }
+
+@keyframes object-container-bob {
+  0% {
+    -webkit-transform: translate(1px, 4px) rotate(-1deg);
+            transform: translate(1px, 4px) rotate(-1deg); }
+  50% {
+    -webkit-transform: translate(-1px, -4px) rotate(1deg);
+            transform: translate(-1px, -4px) rotate(1deg); }
+  100% {
+    -webkit-transform: translate(1px, 4px) rotate(-1deg);
+            transform: translate(1px, 4px) rotate(-1deg); } }
+
+@keyframes object-bob {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50% {
+    -webkit-transform: rotate(48deg);
+            transform: rotate(48deg); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+.object-container--oil-barrel .object, .object-container--oil-barrel .object-submerged {
+  background-image: url("../../assets/img/objects/object_oil-barrel.svg"); }
+
+.object-container--eco-water .object, .object-container--eco-water .object-submerged {
+  background-image: url("../../assets/img/objects/object_eco-water.svg"); }
+
+.object-bob-1 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: object-container-bob;
+          animation-name: object-container-bob; }
+  .object-bob-1 .object-submerged, .object-bob-1 .object {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: object-bob;
+            animation-name: object-bob;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+
+.object-bob-2 {
+  -webkit-animation-duration: 4.2s;
+          animation-duration: 4.2s;
+  -webkit-animation-name: object-container-bob;
+          animation-name: object-container-bob; }
+  .object-bob-2 .object-submerged, .object-bob-2 .object {
+    -webkit-animation-duration: 6.3s;
+            animation-duration: 6.3s;
+    -webkit-animation-name: object-bob;
+            animation-name: object-bob;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+
+.object-bob-3 {
+  -webkit-animation-duration: 3.8s;
+          animation-duration: 3.8s;
+  -webkit-animation-name: object-container-bob;
+          animation-name: object-container-bob; }
+  .object-bob-3 .object-submerged, .object-bob-3 .object {
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: object-bob;
+            animation-name: object-bob;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }

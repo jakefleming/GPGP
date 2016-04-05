@@ -1,0 +1,188 @@
+//setting up objects for testing
+.object-container {
+  background-size: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  //setting up object sizes
+  &--xs {
+
+  }
+  &--sm {
+    height: 48px;
+    width: 48px;
+    .object, .object-submerged {
+      height: 48px;
+      width: 48px;
+    }
+  }
+  &--md {
+
+  }
+  &--lg {
+    height: 128px;
+    width: 128px;
+    .object, .object-submerged {
+      height: 128px;
+      width: 128px;
+    }
+  }
+  &--xl {
+
+  }
+  .object-submerged, .object {
+    transition: 1s all;
+  }
+  &:hover {
+    cursor: pointer;
+    .object {
+      filter: brightness(1.5) drop-shadow(0px 0px 8px white);
+    }
+    .object-submerged {
+      filter: grayscale(0%) opacity(.5) brightness(2) drop-shadow(0px 0px 8px white);
+    }
+    .object-shadow {
+      background-color: white;
+      box-shadow: 0 0 16px 16px white;
+    }
+  }
+}
+
+.object-submerged-mask-container {
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.object, .object-shadow, .object-submerged-mask-container, .object-mask-container {
+  position: absolute;
+}
+
+.object {
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.object-shadow {
+  width: 100%;
+  height: 10%;
+  background: #1EB9D4;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  mix-blend-mode: multiply;
+  z-index: 2;
+  opacity: .5;
+  transition: 1s all;
+}
+
+.object-submerged-mask-container {
+  height: 50%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.object-submerged {
+  background-size: cover;
+  background-position: bottom center;
+  filter: grayscale(100%) opacity(.2) brightness(1) drop-shadow(0px 0px 0px white);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 0;
+}
+
+.object-mask-container {
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+.object {
+  background-size: cover;
+  background-position: top center;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+}
+
+@keyframes object-container-bob {
+  0% {
+    transform: translate(1px, 4px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(-1px, -4px) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(1px, 4px) rotate(-1deg);
+  }
+}
+
+@keyframes object-bob {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(48deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+//object types
+
+.object-container {
+  &--oil-barrel {
+    .object, .object-submerged {
+      background-image:url('../../assets/img/objects/object_oil-barrel.svg');
+    }
+  }
+  &--eco-water {
+    .object, .object-submerged {
+      background-image:url('../../assets/img/objects/object_eco-water.svg');
+    }
+  }
+}
+
+//object animations
+
+.object-bob-1 {
+  animation-duration: 5s;
+  animation-name: object-container-bob;
+  .object-submerged, .object {
+    animation-duration: 1s;
+    animation-name: object-bob;
+    animation-iteration-count: infinite;
+  }
+}
+.object-bob-2 {
+  animation-duration: 4.2s;
+  animation-name: object-container-bob;
+  .object-submerged, .object {
+    animation-duration: 6.3s;
+    animation-name: object-bob;
+    animation-iteration-count: infinite;
+  }
+}
+.object-bob-3 {
+  animation-duration: 3.8s;
+  animation-name: object-container-bob;
+  .object-submerged, .object {
+    animation-duration: 2s;
+    animation-name: object-bob;
+    animation-iteration-count: infinite;
+  }
+}
+
+//object rotations

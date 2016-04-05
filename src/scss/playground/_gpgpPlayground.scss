@@ -111,50 +111,15 @@ body {
   position: relative;
 }
 
-//setting up objects for testing
-.object-container {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  //setting up object sizes
-  &--xs {
 
-  }
-  &--sm {
-    height: 48px;
-    width: 48px;
-  }
-  &--md {
 
-  }
-  &--lg {
-    height: 128px;
-    width: 128px;
-  }
-  &--xl {
-
-  }
-  //making sure images don't go outside their containers
-  img {
-    max-width: 100%;
-    transition: 1s all;
-  }
-  &:hover {
-    cursor: pointer;
-    img {
-      filter: brightness(1.5) drop-shadow(0px 0px 8px white);
-    }
-  }
-}
 
 @keyframes sparkle {
   100% {background-position: 300% 100%}
 }
 
 .object {
-  position: relative;
+  //position: relative;
   &--new {
     &:before {
       animation: sparkle .36s steps(3) infinite;
@@ -340,21 +305,17 @@ body {
 
 .night {
   .atmosphere-overlay {
-    mix-blend-mode: darken;
-    opacity: 0.5;
-    background-image: -webkit-linear-gradient(#9C079E 0%, #110B59 100%);
-    background-image: -o-linear-gradient(#9C079E 0%, #110B59 100%);
-    background-image: linear-gradient(#9C079E 0%, #110B59 100%);
+    // mix-blend-mode: darken;
+    // opacity: 0.5;
+    // background-image: linear-gradient(#9C079E 0%, #110B59 100%);
   }
 }
 
 .sunset {
   .atmosphere-overlay {
-    mix-blend-mode: color;
-    opacity: 0.9;
-    background-image: -webkit-linear-gradient(#FF804E 0%, #8C009A 100%);
-    background-image: -o-linear-gradient(#FF804E 0%, #8C009A 100%);
-    background-image: linear-gradient(#FF804E 0%, #8C009A 100%);
+    // mix-blend-mode: color;
+    // opacity: 0.9;
+    // background-image: linear-gradient(#FF804E 0%, #8C009A 100%);
   }
 }
 
@@ -362,8 +323,6 @@ body {
   .atmosphere-overlay {
     // mix-blend-mode: screen;
     // opacity: 0.5;
-    // background-image: -webkit-linear-gradient(#65FF96 0%, #FFFB09 100%);
-    // background-image: -o-linear-gradient(#65FF96 0%, #FFFB09 100%);
     // background-image: linear-gradient(#65FF96 0%, #FFFB09 100%);
   }
 }

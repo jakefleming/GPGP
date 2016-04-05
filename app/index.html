@@ -13,27 +13,24 @@
   <link href="assets/css/style.min.css" rel="stylesheet">
 
   <script src="assets/components/modernizr/modernizr.js"></script>
+
+  <style>
+
+  </style>
 </head>
 <body>
   <div class="ui-stat-container">
     <div class="stat stat--food">
-      <div class="stat__inner">
-
-      </div>
+      <div class="stat__inner"></div>
     </div>
     <div class="stat stat--water">
-      <div class="stat__inner">
-
-      </div>
+      <div class="stat__inner"></div>
     </div>
     <div class="stat stat--sanity">
-      <div class="stat__inner">
-
-      </div>
+      <div class="stat__inner"></div>
     </div>
   </div>
-  <div class="atmosphere-overlay">
-  </div>
+  <div class="atmosphere-overlay"></div>
 
   <div class="wave-container">
   </div>
@@ -67,26 +64,27 @@
     </div>
   </div>
 
-  <div class="object-container object-container--lg">
-    <div class="object animated object-bob-1 infinite object--new">
-      <img src="assets/img/objects/object_oil-barrel.svg"/>
+  <div class="object-container object-container--lg object-container--oil-barrel animated object-bob-2 infinite">
+    <div class="object-submerged-mask-container">
+      <div class="object-submerged"></div>
+    </div>
+    <div class="object-shadow"></div>
+    <div class="object-mask-container">
+      <div class="object"></div>
     </div>
   </div>
-  <div class="object-container object-container--sm">
-    <div class="object animated object-bob-2 infinite object--new">
-      <img src="assets/img/objects/object_seaweed.svg"/>
+
+  <div class="object-container object-container--sm object-container--eco-water animated object-bob-2 infinite">
+    <div class="object-submerged-mask-container">
+      <div class="object-submerged"></div>
+    </div>
+    <div class="object-shadow"></div>
+    <div class="object-mask-container">
+      <div class="object"></div>
     </div>
   </div>
-  <div class="object-container object-container--sm">
-    <div class="object animated object-bob-3 infinite">
-      <img src="assets/img/objects/object_eco-water.svg"/>
-    </div>
-  </div>
-  <div class="object-container object-container--lg">
-    <div class="object animated object-bob-1 infinite">
-      <img src="assets/img/objects/object_shark.svg"/>
-    </div>
-  </div>
+
+  
 
   <!-- Need to bundle these up nicely -->
   <script src="assets/components/jquery/jquery.min.js"></script>
