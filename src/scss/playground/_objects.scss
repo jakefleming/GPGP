@@ -25,12 +25,12 @@
       height: 128px;
       width: 128px;
     }
+    .object-submerged {
+      top: -64px;
+    }
   }
   &--xl {
 
-  }
-  .object-submerged, .object {
-    transition: 1s all;
   }
   &:hover {
     cursor: pointer;
@@ -55,21 +55,20 @@
   }
 }
 
-.object-submerged-mask-container {
+.object-submerged-mask {
   height: 50%;
   width: 100%;
   bottom: 0;
   left: 0;
 }
 
-.object, .object-shadow, .object-submerged-mask-container, .object-mask-container {
+.object, .object-shadow, .object-submerged-mask, .object-mask, .object-submerged {
   position: absolute;
 }
 
 .object {
   height: 100%;
   width: 100%;
-  transform: rotate(45deg);
   z-index: 0;
 }
 
@@ -86,7 +85,7 @@
   transition: 1s all;
 }
 
-.object-submerged-mask-container {
+.object-submerged-mask {
   height: 50%;
   width: 100%;
   z-index: 1;
@@ -95,12 +94,9 @@
   background-size: cover;
   background-position: bottom center;
   filter: grayscale(100%) opacity(.2) brightness(1);
-  transform: rotate(45deg);
-  position: absolute;
-  bottom: 0;
 }
 
-.object-mask-container {
+.object-mask {
   top: -10%;
   left: -10%;
   height: 60%;
@@ -111,10 +107,29 @@
 .object {
   background-size: cover;
   background-position: top center;
-  transform: rotate(45deg);
   position: absolute;
   top: 15%;
   left: 9%;
+}
+
+.object-rig-bob, .object-rig-rotate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.object-submerged-mask {
+  .object-rig-bob {
+    top: 0;
+    left: 0;
+  }
+}
+
+.object-mask {
+  .object-rig-bob {
+    top: 0;
+    left: 0;
+  }
 }
 
 @keyframes object-container-bob {
