@@ -883,14 +883,11 @@ body {
   .object-container:hover {
     cursor: pointer; }
     .object-container:hover .object {
-      -webkit-filter: brightness(1.5) drop-shadow(0px 0px 8px white);
-              filter: brightness(1.5) drop-shadow(0px 0px 8px white); }
+      -webkit-filter: brightness(1.5) saturate(2) drop-shadow(0 0 6px #B7FEDD);
+              filter: brightness(1.5) saturate(2) drop-shadow(0 0 6px #B7FEDD); }
     .object-container:hover .object-submerged {
-      -webkit-filter: grayscale(0%) opacity(0.5) brightness(2) drop-shadow(0px 0px 8px white);
-              filter: grayscale(0%) opacity(0.5) brightness(2) drop-shadow(0px 0px 8px white); }
-    .object-container:hover .object-shadow {
-      background-color: white;
-      box-shadow: 0 0 16px 16px white; }
+      -webkit-filter: grayscale(50%) opacity(0.25) brightness(1) drop-shadow(0 0 10px #fff);
+              filter: grayscale(50%) opacity(0.25) brightness(1) drop-shadow(0 0 10px #fff); }
 
 .object-submerged-mask-container {
   height: 50%;
@@ -926,14 +923,13 @@ body {
 .object-submerged-mask-container {
   height: 50%;
   width: 100%;
-  z-index: 1;
-  overflow: hidden; }
+  z-index: 1; }
 
 .object-submerged {
   background-size: cover;
   background-position: bottom center;
-  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0px 0px 0px white);
-          filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0px 0px 0px white);
+  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1);
+          filter: grayscale(100%) opacity(0.2) brightness(1);
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -941,10 +937,10 @@ body {
   bottom: 0; }
 
 .object-mask-container {
-  top: 0;
-  left: 0;
-  height: 50%;
-  width: 100%;
+  top: -10%;
+  left: -10%;
+  height: 60%;
+  width: 120%;
   z-index: 2;
   overflow: hidden; }
 
@@ -955,7 +951,8 @@ body {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   position: absolute;
-  top: 0; }
+  top: 15%;
+  left: 9%; }
 
 @-webkit-keyframes object-container-bob {
   0% {
