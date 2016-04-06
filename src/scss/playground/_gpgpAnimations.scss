@@ -1,0 +1,73 @@
+@mixin animated($name, $duration: 1s, $delay: null, $iteration-count:infinite) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  animation-iteration-count: $iteration-count;
+  animation-name: $name;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+
+@keyframes bob-heavy {
+  0% {
+    transform: translate(-1px, -5px);
+  }
+
+  50% {
+    transform: translate(1px, 5px);
+  }
+
+  100% {
+    transform: translate(-1px, -5px);
+  }
+}
+
+@keyframes rotate-45 {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(48deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.bob-heavy {
+  @include animated(bob-heavy, 4s);
+  .object-rig__bob {
+    @include animated(bob-heavy, 4s);
+  }
+}
+
+.rotate-45 {
+  .object-rig__rotate {
+    @include animated(rotate-45, 4s, .5s);
+  }
+}
+
+.raft-bob {
+  animation-duration: 4s;
+  animation-name: raft-bob;
+  animation-delay: 2s;
+
+  .character__torso {
+    animation-name: character-sway;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .character__head {
+    animation-name: character-head-sway;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}

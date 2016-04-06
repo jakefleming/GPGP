@@ -730,8 +730,8 @@ body {
     -webkit-transform: rotate(48deg);
             transform: rotate(48deg); }
   100% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); } }
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
 
 @keyframes rotate-45 {
   0% {
@@ -741,8 +741,8 @@ body {
     -webkit-transform: rotate(48deg);
             transform: rotate(48deg); }
   100% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); } }
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
 
 .bob-heavy {
   -webkit-animation-duration: 4s;
@@ -755,7 +755,7 @@ body {
           animation-name: bob-heavy;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out; }
-  .bob-heavy .object-rig-bob {
+  .bob-heavy .object-rig__bob {
     -webkit-animation-duration: 4s;
             animation-duration: 4s;
     -webkit-animation-fill-mode: both;
@@ -767,7 +767,9 @@ body {
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out; }
 
-.rotate-45 .object-rig-rotate {
+.rotate-45 .object-rig__rotate {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
   -webkit-animation-fill-mode: both;
@@ -808,24 +810,6 @@ body {
             animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
-
-.object-bob-1 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
-
-.object-bob-2 {
-  -webkit-animation-duration: 4.2s;
-          animation-duration: 4.2s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
-
-.object-bob-3 {
-  -webkit-animation-duration: 3.8s;
-          animation-duration: 3.8s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
 
 .animated {
   -webkit-animation-fill-mode: both;
@@ -951,9 +935,11 @@ body {
 
 .object-container--lg {
   height: 128px;
+  width: 128px;
+  height: 128px;
   width: 128px; }
   .object-container--lg .object {
-    background-position: 50% 64px; }
+    background-size: 128px; }
 
 .object-container--xl {
   height: 256px;
@@ -973,9 +959,15 @@ body {
   top: 0;
   width: 100%; }
 
+.object-rig__rotate {
+  top: 50%; }
+
+.object-submerged-container .object-rig__rotate {
+  top: 0; }
+
 .object {
-  background-size: 75% 100%;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   left: 0;
   position: absolute;
@@ -987,9 +979,11 @@ body {
 .object-mask {
   height: 100%;
   left: -25%;
+  overflow: hidden;
   position: absolute;
   top: -50%;
-  width: 150%; }
+  width: 150%;
+  z-index: 2; }
 
 .object-submerged {
   background-size: 100%;
