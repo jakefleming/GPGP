@@ -2,6 +2,7 @@
 # https://HosseinKarami.github.io/fastshell
 # @author Hossein Karami
 
+app/assets/css/style.min.css
 
 ## Node.js
 lib-cov
