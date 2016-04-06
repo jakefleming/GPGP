@@ -9,6 +9,9 @@
     "newtab": "index.html"
   },
   "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
     "storage"
   ]
 }

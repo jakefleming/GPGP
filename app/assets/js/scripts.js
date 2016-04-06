@@ -124,6 +124,22 @@ var objects = ( function($) {
   };
 }(jQuery));
 
+var storage = ( function() {
+  'use strict';
+  return {
+    testing: function() {
+      chrome.storage.sync.set({ 'random': tools.random( 5, 10 ) }, function() {
+        // Notify that we saved.
+        console.log('Settings saved');
+      });
+
+      chrome.storage.sync.get( 'random', function( obj ) {
+        console.log(obj);
+      });
+    }
+  };
+}());
+
 // IIFE
 (function ($, window, document, undefined) {
 
@@ -132,6 +148,7 @@ var objects = ( function($) {
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
+  storage.testing();
 
   // Events
 
