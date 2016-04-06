@@ -8,65 +8,7 @@
 }
 
 
-//setting up animations for raft
-.animated {
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
 
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-@keyframes raft-bob {
-  0% {
-    transform: translate(0, 4px) rotate(-1deg);
-  }
-
-  50% {
-    transform: translate(0, -4px) rotate(1deg);
-  }
-
-  100% {
-    transform: translate(0, 4px) rotate(-1deg);
-  }
-}
-
-
-
-@keyframes character-sway {
-  0% {
-    transform: translateX(-50%) rotate(1deg);
-  }
-
-  50% {
-    transform: translateX(-50%) rotate(-1deg);
-  }
-
-  100% {
-    transform: translateX(-50%) rotate(1deg);
-  }
-}
-
-@keyframes character-head-sway {
-  0% {
-    transform: translate(-50%, 0) rotate(3deg);
-  }
-
-  25% {
-    transform: translate(-50%, 1px) rotate(-2deg);
-  }
-  50% {
-    transform: translate(-50%, 0) rotate(3deg);
-  }
-  75% {
-    transform: translate(-50%, 1px) rotate(-2deg);
-  }
-
-  100% {
-    transform: translate(-50%, 0) rotate(3deg);
-  }
-}
 
 @keyframes bob-heavy {
   0% {
@@ -92,7 +34,7 @@
   }
 
   100% {
-    transform: rotate(45deg);
+    transform: rotate(4deg);
   }
 }
 

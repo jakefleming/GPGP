@@ -700,6 +700,133 @@ body {
   height: 100vh;
   pointer-events: none; }
 
+@-webkit-keyframes bob-heavy {
+  0% {
+    -webkit-transform: translate(-1px, -5px);
+            transform: translate(-1px, -5px); }
+  50% {
+    -webkit-transform: translate(1px, 5px);
+            transform: translate(1px, 5px); }
+  100% {
+    -webkit-transform: translate(-1px, -5px);
+            transform: translate(-1px, -5px); } }
+
+@keyframes bob-heavy {
+  0% {
+    -webkit-transform: translate(-1px, -5px);
+            transform: translate(-1px, -5px); }
+  50% {
+    -webkit-transform: translate(1px, 5px);
+            transform: translate(1px, 5px); }
+  100% {
+    -webkit-transform: translate(-1px, -5px);
+            transform: translate(-1px, -5px); } }
+
+@-webkit-keyframes rotate-45 {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50% {
+    -webkit-transform: rotate(48deg);
+            transform: rotate(48deg); }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); } }
+
+@keyframes rotate-45 {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50% {
+    -webkit-transform: rotate(48deg);
+            transform: rotate(48deg); }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); } }
+
+.bob-heavy {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: bob-heavy;
+          animation-name: bob-heavy;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+  .bob-heavy .object-rig-bob {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: bob-heavy;
+            animation-name: bob-heavy;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+
+.rotate-45 .object-rig-rotate {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: rotate-45;
+          animation-name: rotate-45;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
+.raft-bob {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: raft-bob;
+          animation-name: raft-bob;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+  .raft-bob .character__torso {
+    -webkit-animation-name: character-sway;
+            animation-name: character-sway;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .raft-bob .character__head {
+    -webkit-animation-name: character-head-sway;
+            animation-name: character-head-sway;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+
+.object-bob-1 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
+
+.object-bob-2 {
+  -webkit-animation-duration: 4.2s;
+          animation-duration: 4.2s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
+
+.object-bob-3 {
+  -webkit-animation-duration: 3.8s;
+          animation-duration: 3.8s;
+  -webkit-animation-name: object-bob;
+          animation-name: object-bob; }
+
 .animated {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
@@ -788,171 +915,91 @@ body {
     -webkit-transform: translate(-50%, 0) rotate(3deg);
             transform: translate(-50%, 0) rotate(3deg); } }
 
-@-webkit-keyframes bob-heavy {
-  0% {
-    -webkit-transform: translate(-1px, -5px);
-            transform: translate(-1px, -5px); }
-  50% {
-    -webkit-transform: translate(1px, 5px);
-            transform: translate(1px, 5px); }
-  100% {
-    -webkit-transform: translate(-1px, -5px);
-            transform: translate(-1px, -5px); } }
-
-@keyframes bob-heavy {
-  0% {
-    -webkit-transform: translate(-1px, -5px);
-            transform: translate(-1px, -5px); }
-  50% {
-    -webkit-transform: translate(1px, 5px);
-            transform: translate(1px, 5px); }
-  100% {
-    -webkit-transform: translate(-1px, -5px);
-            transform: translate(-1px, -5px); } }
-
-@-webkit-keyframes rotate-45 {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-  50% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg); }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); } }
-
-@keyframes rotate-45 {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-  50% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg); }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); } }
-
-.bob-heavy {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: bob-heavy;
-          animation-name: bob-heavy;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out; }
-  .bob-heavy .object-rig-bob {
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-name: bob-heavy;
-            animation-name: bob-heavy;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; }
-
-.rotate-45 .object-rig-rotate {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: rotate-45;
-          animation-name: rotate-45;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out; }
-
-.raft-bob {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-name: raft-bob;
-          animation-name: raft-bob;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s; }
-  .raft-bob .character__torso {
-    -webkit-animation-name: character-sway;
-            animation-name: character-sway;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-  .raft-bob .character__head {
-    -webkit-animation-name: character-head-sway;
-            animation-name: character-head-sway;
-    -webkit-animation-duration: 8s;
-            animation-duration: 8s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-
-.object-bob-1 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
-
-.object-bob-2 {
-  -webkit-animation-duration: 4.2s;
-          animation-duration: 4.2s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
-
-.object-bob-3 {
-  -webkit-animation-duration: 3.8s;
-          animation-duration: 3.8s;
-  -webkit-animation-name: object-bob;
-          animation-name: object-bob; }
-
+/* <div class="object-container object-container--lg object-container--oil-barrel bob-heavy rotate-45">
+    <div class="object-rig">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-mask">
+            <div class="object"></div>
+          </div> 
+          <div class="object-shadow"></div>
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div> */
 .object-container {
-  background-size: 100%;
-  position: absolute;
-  z-index: 1; }
-  .object-container--sm {
-    height: 48px;
-    width: 48px; }
-    .object-container--sm .object, .object-container--sm .object-submerged {
-      height: 48px;
-      width: 48px; }
-  .object-container--lg {
-    height: 128px;
-    width: 128px; }
-    .object-container--lg .object, .object-container--lg .object-submerged {
-      height: 128px;
-      width: 128px; }
-    .object-container--lg .object-submerged {
-      top: -64px; }
-  .object-container:hover {
-    cursor: pointer; }
-    .object-container:hover .object {
-      -webkit-filter: brightness(1.5) saturate(2) drop-shadow(0 0 6px #B7FEDD);
-              filter: brightness(1.5) saturate(2) drop-shadow(0 0 6px #B7FEDD); }
-    .object-container:hover .object-submerged {
-      -webkit-filter: grayscale(50%) opacity(0.25) brightness(1) drop-shadow(0 0 10px #fff);
-              filter: grayscale(50%) opacity(0.25) brightness(1) drop-shadow(0 0 10px #fff); }
-
-.object-submerged-mask {
-  height: 50%;
-  width: 100%;
-  bottom: 0;
-  left: 0; }
-
-.object, .object-shadow, .object-submerged-mask, .object-mask, .object-submerged {
   position: absolute; }
 
-.object {
+.object-container--xs {
+  height: 32px;
+  width: 32px; }
+  .object-container--xs .object {
+    background-position: 50% 16px; }
+
+.object-container--sm {
+  height: 48px;
+  width: 48px; }
+  .object-container--sm .object {
+    background-position: 50% 24px; }
+
+.object-container--md {
+  height: 96px;
+  width: 96px; }
+  .object-container--md .object {
+    background-position: 50% 48px; }
+
+.object-container--lg {
+  height: 128px;
+  width: 128px; }
+  .object-container--lg .object {
+    background-position: 50% 64px; }
+
+.object-container--xl {
+  height: 256px;
+  width: 256px; }
+  .object-container--xl .object {
+    background-position: 50% 128px; }
+
+.object-rig {
   height: 100%;
+  position: absolute;
+  width: 100%; }
+
+.object-rig__bob, .object-rig__rotate {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.object {
+  background-size: 75% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+  width: 100%;
+  z-index: 2; }
+
+.object-mask {
+  height: 100%;
+  left: -25%;
+  position: absolute;
+  top: -50%;
+  width: 150%; }
+
+.object-submerged {
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
   width: 100%;
   z-index: 0; }
 
@@ -966,134 +1013,22 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   mix-blend-mode: multiply;
-  z-index: 2;
   opacity: .5;
-  transition: 1s all; }
-
-.object-submerged-mask {
-  height: 50%;
-  width: 100%;
+  position: absolute;
   z-index: 1; }
 
-.object-submerged {
-  background-size: cover;
-  background-position: bottom center;
-  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1);
-          filter: grayscale(100%) opacity(0.2) brightness(1); }
+.object-container:hover {
+  cursor: pointer; }
+  .object-container:hover .object {
+    -webkit-filter: brightness(1.5) saturate(2);
+            filter: brightness(1.5) saturate(2); }
+  .object-container:hover .object-submerged {
+    -webkit-filter: grayscale(100%) opacity(0.2) brightness(2) drop-shadow(0 0 10px white) !important;
+            filter: grayscale(100%) opacity(0.2) brightness(2) drop-shadow(0 0 10px white) !important; }
 
-.object-mask {
-  top: -10%;
-  left: -10%;
-  height: 60%;
-  width: 120%;
-  z-index: 2;
-  overflow: hidden; }
+.object-container.object-container--oil-barrel .object, .object-container.object-container--oil-barrel .object-submerged {
+  background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
 
-.object {
-  background-size: cover;
-  background-position: top center;
-  position: absolute;
-  top: 15%;
-  left: 9%; }
-
-.object-rig-bob, .object-rig-rotate {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
-.object-submerged-mask .object-rig-bob {
-  top: 0;
-  left: 0; }
-
-.object-mask .object-rig-bob {
-  top: 0;
-  left: 0; }
-
-@-webkit-keyframes object-container-bob {
-  0% {
-    -webkit-transform: translate(1px, 4px) rotate(-1deg);
-            transform: translate(1px, 4px) rotate(-1deg); }
-  50% {
-    -webkit-transform: translate(-1px, -4px) rotate(1deg);
-            transform: translate(-1px, -4px) rotate(1deg); }
-  100% {
-    -webkit-transform: translate(1px, 4px) rotate(-1deg);
-            transform: translate(1px, 4px) rotate(-1deg); } }
-
-@keyframes object-container-bob {
-  0% {
-    -webkit-transform: translate(1px, 4px) rotate(-1deg);
-            transform: translate(1px, 4px) rotate(-1deg); }
-  50% {
-    -webkit-transform: translate(-1px, -4px) rotate(1deg);
-            transform: translate(-1px, -4px) rotate(1deg); }
-  100% {
-    -webkit-transform: translate(1px, 4px) rotate(-1deg);
-            transform: translate(1px, 4px) rotate(-1deg); } }
-
-@-webkit-keyframes object-bob {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-  50% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg); }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); } }
-
-@keyframes object-bob {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-  50% {
-    -webkit-transform: rotate(48deg);
-            transform: rotate(48deg); }
-  100% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); } }
-
-.object-container--oil-barrel .object, .object-container--oil-barrel .object-submerged {
-  background-image: url("../../assets/img/objects/object_oil-barrel.svg"); }
-
-.object-container--eco-water .object, .object-container--eco-water .object-submerged {
-  background-image: url("../../assets/img/objects/object_eco-water.svg"); }
-
-.object-bob-1 {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name: object-container-bob;
-          animation-name: object-container-bob; }
-  .object-bob-1 .object-submerged, .object-bob-1 .object {
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-name: object-bob;
-            animation-name: object-bob;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-
-.object-bob-2 {
-  -webkit-animation-duration: 4.2s;
-          animation-duration: 4.2s;
-  -webkit-animation-name: object-container-bob;
-          animation-name: object-container-bob; }
-  .object-bob-2 .object-submerged, .object-bob-2 .object {
-    -webkit-animation-duration: 6.3s;
-            animation-duration: 6.3s;
-    -webkit-animation-name: object-bob;
-            animation-name: object-bob;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-
-.object-bob-3 {
-  -webkit-animation-duration: 3.8s;
-          animation-duration: 3.8s;
-  -webkit-animation-name: object-container-bob;
-          animation-name: object-container-bob; }
-  .object-bob-3 .object-submerged, .object-bob-3 .object {
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-name: object-bob;
-            animation-name: object-bob;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
+.object-container.object-container--oil-barrel .object-submerged {
+  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 white);
+          filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 white); }

@@ -1,0 +1,159 @@
+/* <div class="object-container object-container--lg object-container--oil-barrel bob-heavy rotate-45">
+    <div class="object-rig">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-mask">
+            <div class="object"></div>
+          </div> 
+          <div class="object-shadow"></div>
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div> */
+
+$size-xs: 32;
+$size-sm: 48;
+$size-md: 96;
+$size-lg: 128;
+$size-xl: 256;
+
+
+//put this into a mixin file eventually
+@mixin square($number) {
+  height: $number + px;
+  width: $number + px;
+} 
+
+
+
+//debugging
+
+
+
+//base object container setup
+.object-container {
+  position: absolute;
+}
+
+//sizes for object container
+.object-container--xs {
+  .object {
+    background-position: 50% ($size-xs/2)+px;
+  }
+  @include square($size-xs);
+}
+.object-container--sm {
+  .object {
+    background-position: 50% ($size-sm/2)+px;
+  }
+  @include square($size-sm);
+}
+.object-container--md {
+  .object {
+    background-position: 50% ($size-md/2)+px;
+  }
+  @include square($size-md);
+}
+.object-container--lg {
+  .object {
+    background-position: 50% ($size-lg/2)+px;
+  }
+  @include square($size-lg);
+}
+.object-container--xl {
+  .object {
+    background-position: 50% ($size-xl/2)+px;
+  }
+  @include square($size-xl);
+}
+
+
+
+//object rig setup
+.object-rig {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.object-rig__bob, .object-rig__rotate {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+
+//base object setup
+.object {
+  background-size: 75% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+  width: 100%;
+  z-index: 2;
+}
+
+
+
+//masking the object
+.object-mask {
+  height: 100%;
+  left: -25%;
+  position: absolute;
+  top: -50%;
+  width: 150%;
+}
+
+
+
+//generating a silhouette of the object
+.object-submerged {
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+  width: 100%;
+  z-index: 0;
+}
+
+
+
+//shadow setup
+.object-shadow {
+  width: 100%;
+  height: 10%;
+  background: #1EB9D4;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  mix-blend-mode: multiply;
+  opacity: .5;
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+//object types
+
+
+//object states
+.object-container:hover {
+  cursor: pointer;
+  .object {
+    filter: brightness(1.5) saturate(2);
+  }
+  .object-submerged {
+    filter: grayscale(100%) opacity(.2) brightness(2) drop-shadow(0 0 10px white)!important;
+  }
+}

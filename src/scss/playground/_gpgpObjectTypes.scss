@@ -1,0 +1,8 @@
+.object-container.object-container--oil-barrel {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_oil-barrel.svg);
+  }
+  .object-submerged {
+    filter: grayscale(100%) opacity(.2) brightness(1) drop-shadow(0 0 0 white);
+  }
+}
