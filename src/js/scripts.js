@@ -90,11 +90,27 @@ var objects = ( function($) {
   'use strict';
   return {
     spreadObjects: function() {
+      // function isCollide(a, b) {
+      //     return !(
+      //         ((a.y + a.height) < (b.y)) ||
+      //         (a.y > (b.y + b.height)) ||
+      //         ((a.x + a.width) < b.x) ||
+      //         (a.x > (b.x + b.width))
+      //     );
+      // }
       $( '.object-container' ).each( function() {
-        var left = tools.randomRange( 10, 90, 38, 68 ) + 'vw';
-        var top  = tools.randomRange( 10, 90, 38, 68 ) + 'vh';
+        var top   = tools.randomRange( 10, 90, 38, 68 );
+        var left  = tools.randomRange( 10, 90, 38, 68 );
+        var z     = Math.floor( top ) + ( $(this).height() / 8);
+        var delay = ( config.waveTiming - 1.5 ) * ( left / 100 ) * -1 + 's';
 
-        $(this).css({ 'top': top, 'left': left });
+        $(this).css({
+          'top': top + 'vh',
+          'left': left + 'vw',
+          'z-index': z,
+          'animation-delay': delay,
+          '-webkit-animation-delay': delay
+        });
       });
     }
   };

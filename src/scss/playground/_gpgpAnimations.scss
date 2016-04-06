@@ -5,6 +5,8 @@
   animation-iteration-count: $iteration-count;
   animation-name: $name;
   animation-timing-function: ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 
@@ -12,42 +14,57 @@
 
 @keyframes bob-heavy {
   0% {
-    transform: translate(-1px, -5px);
+    transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(1px, 5px);
+    transform: translate(2px, 10px);
   }
 
   100% {
-    transform: translate(-1px, -5px);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes shadow-shift {
+  0% {
+    margin-left: 2px;
+  }
+  50% {
+    margin-left: 8px;
+  }
+  100% {
+    margin-left: 2px;
   }
 }
 
 @keyframes rotate-45 {
   0% {
-    transform: rotate(45deg);
+    transform: rotate(42deg);
   }
 
   50% {
-    transform: rotate(48deg);
+    transform: rotate(50deg);
   }
 
   100% {
-    transform: rotate(45deg);
+    transform: rotate(42deg);
   }
 }
 
 .bob-heavy {
-  @include animated(bob-heavy, 4s);
+  @include animated(bob-heavy, 4s, 3s);
   .object-rig__bob {
-    @include animated(bob-heavy, 4s);
+    @include animated(bob-heavy, 4s, 3s);
   }
 }
 
 .rotate-45 {
   .object-rig__rotate {
     @include animated(rotate-45, 4s, .5s);
+  }
+  .object-shadow {
+    @include animated(shadow-shift, 4s, 3s);
   }
 }
 
