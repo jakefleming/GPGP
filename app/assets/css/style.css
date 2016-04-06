@@ -905,7 +905,7 @@ body {
         <div class="object-rig__rotate">
           <div class="object-mask">
             <div class="object"></div>
-          </div> 
+          </div>
           <div class="object-shadow"></div>
           <div class="object-submerged"></div>
         </div>
@@ -983,7 +983,8 @@ body {
   position: absolute;
   top: -50%;
   width: 150%;
-  z-index: 2; }
+  z-index: 2;
+  pointer-events: none; }
 
 .object-submerged {
   background-size: 100%;

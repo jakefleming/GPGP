@@ -4,7 +4,7 @@
         <div class="object-rig__rotate">
           <div class="object-mask">
             <div class="object"></div>
-          </div> 
+          </div>
           <div class="object-shadow"></div>
           <div class="object-submerged"></div>
         </div>
@@ -23,7 +23,7 @@ $size-xl: 256;
 @mixin square($number) {
   height: $number + px;
   width: $number + px;
-} 
+}
 
 
 
@@ -121,6 +121,7 @@ $size-xl: 256;
   top: -50%;
   width: 150%;
   z-index: 2;
+  pointer-events: none;
 }
 
 
