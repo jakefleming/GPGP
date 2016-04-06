@@ -106,25 +106,6 @@ body {
   }
 }
 
-//setting up wearables
-.character {
-  &--has-hat {
-    .character-hat {
-      display: block;
-    }
-  }
-  //setting up hat attributes
-  &-hat {
-    height: 96px;
-    left: 50%;
-    position: absolute;
-    top: -32px;
-    transform: translateX(-50%);
-    width: 96px;
-    z-index:5;
-  }
-}
-
 //setting up rafts
 .raft-container {
   height: 160px;

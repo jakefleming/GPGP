@@ -606,20 +606,6 @@ body {
   .character img {
     max-width: 100%; }
 
-.character--has-hat .character-hat {
-  display: block; }
-
-.character-hat {
-  height: 96px;
-  left: 50%;
-  position: absolute;
-  top: -32px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 96px;
-  z-index: 5; }
-
 .raft-container {
   height: 160px;
   left: 50%;
@@ -794,6 +780,20 @@ body {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
 
+.character--has-hat .character-hat {
+  display: block; }
+
+.character-hat {
+  height: 96px;
+  left: 50%;
+  position: absolute;
+  top: -32px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 96px;
+  z-index: 5; }
+
 .animated {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
@@ -933,7 +933,8 @@ body {
 .object-rig {
   height: 100%;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .object-rig__bob, .object-rig__rotate {
   height: 100%;
@@ -957,7 +958,7 @@ body {
   top: 0;
   transition: all 1s;
   width: 100%;
-  z-index: 2; }
+  z-index: 0; }
 
 .object-mask {
   height: 100%;
@@ -966,7 +967,7 @@ body {
   position: absolute;
   top: -50%;
   width: 150%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none; }
 
 .object-submerged {
@@ -979,9 +980,9 @@ body {
   top: 0;
   transition: all 1s;
   width: 100%;
-  z-index: 0;
-  -webkit-filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
-          filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg); }
+  z-index: 1;
+  -webkit-filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80);
+          filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80); }
 
 .object-shadow {
   width: 100%;
@@ -1003,8 +1004,8 @@ body {
     -webkit-filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) !important;
             filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) !important; }
   .object-container:hover .object-submerged {
-    -webkit-filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important;
-            filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important; }
+    -webkit-filter: sepia(100%) opacity(0.7) brightness(1.05) drop-shadow(0 0 10px white) hue-rotate(156deg) saturate(50) !important;
+            filter: sepia(100%) opacity(0.7) brightness(1.05) drop-shadow(0 0 10px white) hue-rotate(156deg) saturate(50) !important; }
 
 .object-container--new:before {
   -webkit-animation: sparkle 0.36s steps(3) infinite;

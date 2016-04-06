@@ -76,6 +76,7 @@ $size-xl: 256;
   height: 100%;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 .object-rig__bob, .object-rig__rotate {
   height: 100%;
@@ -107,7 +108,7 @@ $size-xl: 256;
   top: 0;
   transition: all 1s;
   width: 100%;
-  z-index: 2;
+  z-index: 0;
 }
 
 
@@ -120,7 +121,7 @@ $size-xl: 256;
   position: absolute;
   top: -50%;
   width: 150%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -137,8 +138,8 @@ $size-xl: 256;
   top: 0;
   transition: all 1s;
   width: 100%;
-  z-index: 0;
-  filter: sepia(100%) opacity(.2) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
+  z-index: 1;
+  filter: sepia(100%) opacity(.2) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80);
 }
 
 
@@ -166,7 +167,7 @@ $size-xl: 256;
     filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255,255,255,.3))!important;
   }
   .object-submerged {
-    filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg)!important;
+    filter: sepia(100%) opacity(.7) brightness(1.05) drop-shadow(0 0 10px white) hue-rotate(156deg)  saturate(50)!important;
   }
 }
 
