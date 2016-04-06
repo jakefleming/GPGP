@@ -1,3 +1,5 @@
+$wave-height: '10px';
+
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
   background: #46afdb; /* Old browsers */
@@ -21,7 +23,7 @@ body {
 
 .dev-mode {
   display: none;
-  
+
   span,
   a {
     padding: 1rem 0 1rem 1rem;
@@ -51,10 +53,13 @@ body {
     height: 64px;
     left: 50%;
     position: absolute;
-    top: -36px;
+    top: -40px;
     transform: translateX(-50%);
     width: 64px;
     z-index: 4;
+    &--img {
+      display: none;
+    }
   }
   //setting up torso attributes
   &__torso {
@@ -103,6 +108,22 @@ body {
   //making sure images don't go outside their containers
   img {
     max-width: 100%;
+  }
+}
+
+.beard-0 {
+  .character__head--img-0 {
+    display: block;
+  }
+}
+.beard-1 {
+  .character__head--img-1 {
+    display: block;
+  }
+}
+.beard-2 {
+  .character__head--img-2 {
+    display: block;
   }
 }
 
