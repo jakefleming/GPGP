@@ -138,7 +138,7 @@ $size-xl: 256;
   transition: all 1s;
   width: 100%;
   z-index: 0;
-  filter: sepia(100%) opacity(.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
+  filter: sepia(100%) opacity(.2) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
 }
 
 
@@ -159,9 +159,6 @@ $size-xl: 256;
 
 
 
-//object types
-
-
 //object states
 .object-container:hover {
   cursor: pointer;
@@ -170,5 +167,22 @@ $size-xl: 256;
   }
   .object-submerged {
     filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg)!important;
+  }
+}
+
+.object-container--new {
+  &:before {
+    animation: sparkle .36s steps(3) infinite;
+    background-image: url(../../assets/img/fx/sparkle.svg);
+    background-position: top left;
+    background-size: 400%;
+    content: '';
+    height: 32px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -32px;
+    transform: translateX(-50%);
+    width: 32px;
   }
 }

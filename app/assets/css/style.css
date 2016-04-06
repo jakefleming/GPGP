@@ -644,23 +644,6 @@ body {
   100% {
     background-position: 300% 100%; } }
 
-.object--new:before {
-  -webkit-animation: sparkle 0.36s steps(3) infinite;
-          animation: sparkle 0.36s steps(3) infinite;
-  background-image: url(../../assets/img/fx/sparkle.svg);
-  background-position: top left;
-  background-size: 400%;
-  content: '';
-  height: 32px;
-  left: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: -32px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 32px; }
-
 .ui-stat-container {
   position: absolute;
   bottom: -10px;
@@ -997,8 +980,8 @@ body {
   transition: all 1s;
   width: 100%;
   z-index: 0;
-  -webkit-filter: sepia(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
-          filter: sepia(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg); }
+  -webkit-filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
+          filter: sepia(100%) opacity(0.2) brightness(0.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg); }
 
 .object-shadow {
   width: 100%;
@@ -1023,11 +1006,31 @@ body {
     -webkit-filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important;
             filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important; }
 
-.object-container.object-container--oil-barrel .object, .object-container.object-container--oil-barrel .object-submerged {
-  background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
+.object-container--new:before {
+  -webkit-animation: sparkle 0.36s steps(3) infinite;
+          animation: sparkle 0.36s steps(3) infinite;
+  background-image: url(../../assets/img/fx/sparkle.svg);
+  background-position: top left;
+  background-size: 400%;
+  content: '';
+  height: 32px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -32px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 32px; }
 
 .object-container.object-container--seaweed .object, .object-container.object-container--seaweed .object-submerged {
   background-image: url(../../assets/img/objects/object_seaweed.svg); }
 
 .object-container.object-container--eco-water .object, .object-container.object-container--eco-water .object-submerged {
   background-image: url(../../assets/img/objects/object_eco-water.svg); }
+
+.object-container.object-container--oil-barrel .object, .object-container.object-container--oil-barrel .object-submerged {
+  background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
+
+.object-container.object-container--shark .object, .object-container.object-container--shark .object-submerged {
+  background-image: url(../../assets/img/objects/object_shark.svg); }
