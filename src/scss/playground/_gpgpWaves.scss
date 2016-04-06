@@ -50,15 +50,15 @@
 
 @keyframes wave-bob {
   0% {
-    transform: translate(0, 0) rotate(-2deg);
+    transform: translate(0, 0) rotate(-3deg);
   }
 
-  50% {
-    transform: translate(0, -6px) rotate(2deg);
+  60% {
+    transform: translate(0, -10px) rotate(3deg);
   }
 
   100% {
-    transform: translate(0, 0) rotate(-2deg);
+    transform: translate(0, 0) rotate(-3deg);
   }
 }
 

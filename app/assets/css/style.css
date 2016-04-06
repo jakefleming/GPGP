@@ -493,25 +493,25 @@ th {
 
 @-webkit-keyframes wave-bob {
   0% {
-    -webkit-transform: translate(0, 0) rotate(-2deg);
-            transform: translate(0, 0) rotate(-2deg); }
-  50% {
-    -webkit-transform: translate(0, -6px) rotate(2deg);
-            transform: translate(0, -6px) rotate(2deg); }
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); }
+  60% {
+    -webkit-transform: translate(0, -10px) rotate(3deg);
+            transform: translate(0, -10px) rotate(3deg); }
   100% {
-    -webkit-transform: translate(0, 0) rotate(-2deg);
-            transform: translate(0, 0) rotate(-2deg); } }
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); } }
 
 @keyframes wave-bob {
   0% {
-    -webkit-transform: translate(0, 0) rotate(-2deg);
-            transform: translate(0, 0) rotate(-2deg); }
-  50% {
-    -webkit-transform: translate(0, -6px) rotate(2deg);
-            transform: translate(0, -6px) rotate(2deg); }
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); }
+  60% {
+    -webkit-transform: translate(0, -10px) rotate(3deg);
+            transform: translate(0, -10px) rotate(3deg); }
   100% {
-    -webkit-transform: translate(0, 0) rotate(-2deg);
-            transform: translate(0, 0) rotate(-2deg); } }
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); } }
 
 .wave-bob {
   -webkit-animation-name: wave-bob;
