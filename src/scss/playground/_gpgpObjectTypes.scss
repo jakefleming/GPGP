@@ -2,7 +2,16 @@
   .object, .object-submerged {
     background-image: url(../../assets/img/objects/object_oil-barrel.svg);
   }
-  .object-submerged {
-    filter: grayscale(100%) opacity(.2) brightness(1) drop-shadow(0 0 0 white);
+}
+
+.object-container.object-container--seaweed {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_seaweed.svg);
+  }
+}
+
+.object-container.object-container--eco-water {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_eco-water.svg);
   }
 }

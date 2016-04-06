@@ -919,19 +919,19 @@ body {
   height: 32px;
   width: 32px; }
   .object-container--xs .object {
-    background-position: 50% 16px; }
+    background-size: 32px; }
 
 .object-container--sm {
   height: 48px;
   width: 48px; }
   .object-container--sm .object {
-    background-position: 50% 24px; }
+    background-size: 48px; }
 
 .object-container--md {
   height: 96px;
   width: 96px; }
   .object-container--md .object {
-    background-position: 50% 48px; }
+    background-size: 96px; }
 
 .object-container--lg {
   height: 128px;
@@ -945,7 +945,7 @@ body {
   height: 256px;
   width: 256px; }
   .object-container--xl .object {
-    background-position: 50% 128px; }
+    background-size: 256px; }
 
 .object-rig {
   height: 100%;
@@ -995,7 +995,9 @@ body {
   top: 0;
   transition: all 1s;
   width: 100%;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-filter: sepia(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
+          filter: sepia(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg); }
 
 .object-shadow {
   width: 100%;
@@ -1014,15 +1016,17 @@ body {
 .object-container:hover {
   cursor: pointer; }
   .object-container:hover .object {
-    -webkit-filter: brightness(1.5) saturate(2);
-            filter: brightness(1.5) saturate(2); }
+    -webkit-filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) !important;
+            filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) !important; }
   .object-container:hover .object-submerged {
-    -webkit-filter: grayscale(100%) opacity(0.2) brightness(2) drop-shadow(0 0 10px white) !important;
-            filter: grayscale(100%) opacity(0.2) brightness(2) drop-shadow(0 0 10px white) !important; }
+    -webkit-filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important;
+            filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg) !important; }
 
 .object-container.object-container--oil-barrel .object, .object-container.object-container--oil-barrel .object-submerged {
   background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
 
-.object-container.object-container--oil-barrel .object-submerged {
-  -webkit-filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 white);
-          filter: grayscale(100%) opacity(0.2) brightness(1) drop-shadow(0 0 0 white); }
+.object-container.object-container--seaweed .object, .object-container.object-container--seaweed .object-submerged {
+  background-image: url(../../assets/img/objects/object_seaweed.svg); }
+
+.object-container.object-container--eco-water .object, .object-container.object-container--eco-water .object-submerged {
+  background-image: url(../../assets/img/objects/object_eco-water.svg); }

@@ -39,19 +39,19 @@ $size-xl: 256;
 //sizes for object container
 .object-container--xs {
   .object {
-    background-position: 50% ($size-xs/2)+px;
+    background-size: $size-xs+px;
   }
   @include square($size-xs);
 }
 .object-container--sm {
   .object {
-    background-position: 50% ($size-sm/2)+px;
+    background-size: $size-sm+px;
   }
   @include square($size-sm);
 }
 .object-container--md {
   .object {
-    background-position: 50% ($size-md/2)+px;
+    background-size: $size-md+px;
   }
   @include square($size-md);
 }
@@ -64,7 +64,7 @@ $size-xl: 256;
 }
 .object-container--xl {
   .object {
-    background-position: 50% ($size-xl/2)+px;
+    background-size: $size-xl+px;
   }
   @include square($size-xl);
 }
@@ -137,6 +137,7 @@ $size-xl: 256;
   transition: all 1s;
   width: 100%;
   z-index: 0;
+  filter: sepia(100%) opacity(.2) brightness(1) drop-shadow(0 0 0 #fff) hue-rotate(156deg);
 }
 
 
@@ -164,9 +165,9 @@ $size-xl: 256;
 .object-container:hover {
   cursor: pointer;
   .object {
-    filter: brightness(1.5) saturate(2);
+    filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255,255,255,.3))!important;
   }
   .object-submerged {
-    filter: grayscale(100%) opacity(.2) brightness(2) drop-shadow(0 0 10px white)!important;
+    filter: sepia(100%) opacity(1) brightness(1.5) drop-shadow(0 0 10px white) hue-rotate(156deg)!important;
   }
 }
