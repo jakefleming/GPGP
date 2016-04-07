@@ -137,13 +137,21 @@ $size-xl: 256;
   background-repeat: no-repeat;
   height: 100%;
   left: 0;
-  opacity: .2;
+  opacity: 1;
   position: absolute;
   top: 0;
   transition: all 1s;
   width: 100%;
   z-index: 1;
-  filter: sepia(100%) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80);
+  //filter: sepia(100%) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80);
+  &:after {
+    content: '';
+    background:linear-gradient(to bottom,#46afdb 0,#59f0e8 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+  }
 }
 
 
@@ -172,7 +180,8 @@ $size-xl: 256;
     filter: brightness(1.5) saturate(2) drop-shadow(0 0 10px rgba(255,255,255,.5))!important;
   }
   .object-submerged {
-    opacity: .5;
+    filter: brightness(1.1)!important;
+    opacity: 1;
   }
 }
 

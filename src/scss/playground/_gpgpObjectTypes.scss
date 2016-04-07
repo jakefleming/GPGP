@@ -4,11 +4,17 @@
   .object, .object-submerged {
     background-image: url(../../assets/img/objects/object_seaweed.svg);
   }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_seaweed.svg);
+  }
 }
 
 .object-container.object-container--eco-water {
   .object, .object-submerged {
     background-image: url(../../assets/img/objects/object_eco-water.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_eco-water.svg);
   }
 }
 
@@ -17,11 +23,17 @@
   .object, .object-submerged {
     background-image: url(../../assets/img/objects/object_oil-barrel.svg);
   }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_oil-barrel.svg);
+  }
 }
 
 //xl objects
 .object-container.object-container--shark {
   .object, .object-submerged {
     background-image: url(../../assets/img/objects/object_shark.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_shark.svg);
   }
 }
