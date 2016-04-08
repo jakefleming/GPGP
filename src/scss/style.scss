@@ -1,10 +1,4 @@
 //----------------------------------*\
-// SCSS MIXINS
-//----------------------------------*/
-
-@import 'mixins/_position.scss';
-
-//----------------------------------*\
 // CONFIG MODULES
 //----------------------------------*/
 
@@ -13,6 +7,14 @@
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_normalize.scss';
+
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import 'mixins/_object.scss';
+@import 'mixins/_position.scss';
+
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
@@ -48,10 +50,10 @@
 // WEEEEEeeeeee
 //----------------------------------*/
 
-@import 'playground/_gpgpWaves.scss';
-@import 'playground/_gpgpPlayground.scss';
-@import 'playground/_gpgpAnimations.scss';
-@import 'playground/_gpgpCharacter.scss';
-@import 'playground/_gpgpObjectBase.scss';
-@import 'playground/_gpgpObjectTypes.scss';
+@import 'modules/_gpgpWaves.scss';
+@import 'modules/_gpgpPlayground.scss';
+@import 'modules/_gpgpAnimations.scss';
+@import 'modules/_gpgpCharacter.scss';
+@import 'modules/_gpgpObjectBase.scss';
+@import 'modules/_gpgpObjectTypes.scss';
 

@@ -1,25 +1,10 @@
-$wave-height: '10px';
-
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
   background: #46afdb; /* Old browsers */
   background:linear-gradient(to bottom,#46afdb 0,#59f0e8 100%);
 }
 
-.pause-animation {
-  * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-    animation-iteration-count: 1 !important;
-  }
 
-  &--btn:hover {
-    opacity: 1;
-  }
-}
 
 .dev-mode {
   display: none;
@@ -36,33 +21,6 @@ body {
     font-size: .9rem;
     letter-spacing: 1px;
   }
-}
-
-
-
-//setting up rafts
-.raft-container {
-  height: 160px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
-  z-index: 1;
-  //making sure images don't go outside their containers
-  img {
-    max-width: 100%;
-  }
-}
-.raft {
-  position: relative;
-}
-
-
-
-
-@keyframes sparkle {
-  100% {background-position: 300% 100%}
 }
 
 //setting up ui stats

@@ -1,1 +1,24 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#cc0072;}.cls-3{fill:#520147;}</style><linearGradient id="linear-gradient" x1="5.3" y1="6.53" x2="42.7" y2="43.93" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd287"/><stop offset="0.13" stop-color="#feb18c"/><stop offset="0.34" stop-color="#fe8194"/><stop offset="0.53" stop-color="#fd5b99"/><stop offset="0.72" stop-color="#fc409e"/><stop offset="0.88" stop-color="#fc30a0"/><stop offset="1" stop-color="#fc2aa1"/></linearGradient></defs><title>character-1</title><path class="cls-1" d="M24,0h4A20,20,0,0,1,48,20V32A16,16,0,0,1,32,48H16A16,16,0,0,1,0,32V24A24,24,0,0,1,24,0Z"/><circle class="cls-2" cx="10" cy="18" r="2"/><circle class="cls-2" cx="38" cy="18" r="2"/><path class="cls-3" d="M0,32A16,16,0,0,0,16,48H32A16,16,0,0,0,48,32"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#CC0072;}
+	.st2{fill:#520147;}
+</style>
+<title>character-1</title>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4.1217" y1="44.7068" x2="42.7293" y2="6.0992" gradientTransform="matrix(1 0 0 -1 0 50)">
+	<stop  offset="0" style="stop-color:#FFD287"/>
+	<stop  offset="0.13" style="stop-color:#FEB18C"/>
+	<stop  offset="0.34" style="stop-color:#FE8194"/>
+	<stop  offset="0.53" style="stop-color:#FD5B99"/>
+	<stop  offset="0.72" style="stop-color:#FC409E"/>
+	<stop  offset="0.88" style="stop-color:#FC30A0"/>
+	<stop  offset="1" style="stop-color:#FC2AA1"/>
+</linearGradient>
+<path class="st0" d="M20,0h8c11,0,20,9,20,20v12c0,8.8-7.2,16-16,16H16C7.2,48,0,40.8,0,32V20C0,9,9,0,20,0z"/>
+<circle class="st1" cx="10" cy="18" r="2"/>
+<circle class="st1" cx="38" cy="18" r="2"/>
+<path class="st2" d="M0,32c0,8.8,7.2,16,16,16h16c8.8,0,16-7.2,16-16"/>
+</svg>

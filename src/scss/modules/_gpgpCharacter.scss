@@ -1,0 +1,178 @@
+//setting up the character
+.character {
+  //background: red;
+  height: 128px;
+  left: 50%;
+  margin-top: -48px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  z-index:4;
+  //setting up head attributes
+  &__head {
+    background-repeat: no-repeat;
+    height: 64px;
+    left: 50%;
+    position: absolute;
+    top: -36px;
+    transform: translateX(-50%);
+    width: 64px;
+    z-index: 4;
+    &--img {
+      display: none;
+    }
+  }
+  //setting up torso attributes
+  &__torso {
+    background-repeat: no-repeat;
+    height: 48px;
+    left: 50%;
+    position: absolute;
+    top: 48px;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+    transform-style: preserve-3D;
+    width: 48px;
+    z-index: 2;
+    &:after {
+      background-repeat: no-repeat;
+      content: '';
+      background-size: 100%;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  //setting up arm attributes
+  &__arm {
+    background-repeat: no-repeat;
+    height: 48px;
+    position: absolute;
+    top: 4px;
+    width: 32px;
+    z-index: 1;
+    &--L {
+      left: -20px;
+    }
+    &--R {
+      right: -20px;
+    }
+  }
+  //setting up leg attributes
+  &__leg {
+    background-repeat: no-repeat;
+    height: 48px;
+    position: absolute;
+    bottom: -2px;
+    width: 32px;
+    z-index: 3;
+    &--L {
+      left: 26px;
+    }
+    &--R {
+      right: 26px;
+    }
+  }
+  //making sure images don't go outside their containers
+  img {
+    max-width: 100%;
+  }
+}
+
+.beard-0 {
+  .character__head {
+    background-image: url(../../assets/img/characters/character-1/character-1_head-beard-0.svg);
+  }
+}
+.beard-1 {
+  .character__head {
+    background-image: url(../../assets/img/characters/character-1/character-1_head-beard-1.svg);
+  }
+}
+.beard-2 {
+  .character__head {
+    background-image: url(../../assets/img/characters/character-1/character-1_head-beard-2.svg);
+  }
+}
+
+//setting up wearables
+.character {
+  &--has-hat {
+    .character__hat {
+      display: block;
+    }
+  }
+  //setting up hat attributes
+  &__hat {
+    background-repeat: no-repeat;
+    height: $size-md+px;
+    left: 50%;
+    position: absolute;
+    top: -$size-xs+px;
+    transform: translateX(-50%);
+    width: $size-md+px;
+    z-index:5;
+  }
+}
+
+//head types
+.character__head {
+  background-image: url(../../assets/img/characters/character-1/character-1_head.svg);
+}
+
+//torso types
+.character__torso {
+  &:after {
+    background-image: url(../../assets/img/characters/character-1/character-1_torso.svg);
+  }
+}
+
+//left arm types
+.character__arm--L {
+  background-image: url(../../assets/img/characters/character-1/character-1_arm-L.svg);
+}
+//right arm types
+.character__arm--R {
+  background-image: url(../../assets/img/characters/character-1/character-1_arm-R.svg);
+}
+
+//left leg types
+.character__leg--L {
+  background-image: url(../../assets/img/characters/character-1/character-1_leg-L.svg);
+}
+//right leg types
+.character__leg--R {
+  background-image: url(../../assets/img/characters/character-1/character-1_leg-R.svg);
+}
+
+//hat types
+.character__hat--seaweed {
+  background-image: url(../../assets/img/wearables/hats/hat_seaweed.svg);
+}
+
+
+
+//setting up rafts
+.raft-container {
+  @include object();
+  top: 50%;
+  left: 50%;
+  margin: (-$size-lg/2 + px) 0 0 (-$size-lg/2 + px);
+}
+.raft {
+  position: relative;
+}
+
+.object-submerged-container {
+  .character {
+    filter: hue-rotate(-132deg) brightness(.9);
+  }
+}

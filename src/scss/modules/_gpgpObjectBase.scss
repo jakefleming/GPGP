@@ -12,24 +12,7 @@
     </div>
   </div> */
 
-$size-xs: 32;
-$size-sm: 48;
-$size-md: 96;
-$size-lg: 128;
-$size-xl: 256;
-
-
-//put this into a mixin file eventually
-@mixin square($number) {
-  height: $number + px;
-  width: $number + px;
-}
-
-
-
 //debugging
-
-
 
 //base object container setup
 .object-container {
@@ -146,7 +129,7 @@ $size-xl: 256;
   //filter: sepia(100%) brightness(.6) drop-shadow(0 0 0 #fff) hue-rotate(156deg) saturate(80);
   &:after {
     content: '';
-    background:linear-gradient(to bottom,#46afdb 0,#59f0e8 100%);
+    background:linear-gradient(to bottom,$color-aqua 0,$color-sea 100%);
     position: absolute;
     height: 100%;
     width: 100%;
