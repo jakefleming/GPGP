@@ -80,7 +80,7 @@ var scene = ( function() {
       if (n > 19 || n < 7) {
         // If time is after 7PM or before 7AM, apply night theme to ‘body’
         return 'night beard-2';
-      } else if (n > 16 && n < 19) {
+      } else if (n > 16 && n <= 19) {
         // If time is between 4PM – 7PM sunset theme to ‘body’
         return 'sunset beard-1';
       } else {
