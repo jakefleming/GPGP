@@ -3,6 +3,7 @@
 # @author Hossein Karami
 
 app/assets/css/style.min.css
+app/assets/js/scripts.min.js
 
 ## Node.js
 lib-cov
