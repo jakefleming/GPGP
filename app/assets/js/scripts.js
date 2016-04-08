@@ -128,13 +128,40 @@ var storage = ( function() {
   'use strict';
   return {
     testing: function() {
-      chrome.storage.sync.set({ 'random': tools.random( 5, 10 ) }, function() {
-        // Notify that we saved.
-        console.log('Settings saved');
+      chrome.storage.sync.clear();
+      var name = prompt("What's your name", "Farhad");
+
+      if( name != null ) {
+        chrome.storage.sync.set({
+          'player': {
+            'name': name
+          }
+        }, function() {
+          // Notify that we saved.
+          console.log('Settings saved');
+        });
+      }
+
+      var name;
+
+      chrome.storage.sync.get( 'player', function( obj ) {
+        name = obj.player.name;
       });
 
-      chrome.storage.sync.get( 'random', function( obj ) {
-        console.log(obj);
+      if( !name ) {
+        name = prompt( "What's your name?", "Farhad" );
+        chrome.storage.sync.set({
+          'player': {
+            'name': name
+          }
+        }, function() {
+          // Notify that we saved.
+          console.log('Settings saved');
+        });
+      }
+
+      chrome.storage.sync.get( 'player', function( obj ) {
+        $( '.character__name' ).text( obj.player.name );
       });
     }
   };
@@ -148,7 +175,7 @@ var storage = ( function() {
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
-  storage.testing();
+  // storage.testing();
 
   // Events
 
