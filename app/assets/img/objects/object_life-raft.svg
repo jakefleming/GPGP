@@ -9,9 +9,9 @@
 	.st3{fill:none;stroke:#FFD580;stroke-width:16;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<polygon class="st0" points="108,40.1 20,40.1 8,52.1 8,72.1 20,72.1 108,72.1 120,72.1 120,52.1 	"/>
-	<polygon class="st1" points="108,28.1 20,28.1 8,40.1 8,48.1 8.1,60.1 119.9,60.1 120,48.1 120,40.1 	"/>
-	<polygon class="st2" points="108,24.1 20,24.1 8,36.1 8,44.1 20,56.1 108,56.1 120,44.1 120,36.1 	"/>
-	<polygon class="st3" points="108,24.1 20,24.1 8,24.1 8,56.1 20,56.1 108,56.1 120,56.1 120,24.1 	"/>
+	<polygon class="st0" points="108,40 20,40 8,52 8,72 20,72 108,72 120,72 120,52 	"/>
+	<polygon class="st1" points="108,28 20,28 8,40 8,48 8.1,60 119.9,60 120,48 120,40 	"/>
+	<polygon class="st2" points="108,24 20,24 8,36 8,44 20,56 108,56 120,44 120,36 	"/>
+	<polygon class="st3" points="108,24 20,24 8,24 8,56 20,56 108,56 120,56 120,24 	"/>
 </g>
 </svg>

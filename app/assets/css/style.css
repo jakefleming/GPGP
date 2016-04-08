@@ -1260,6 +1260,13 @@ body {
   -webkit-mask-image: url(../../assets/img/objects/object_life-raft.svg);
           mask-image: url(../../assets/img/objects/object_life-raft.svg); }
 
+.object-container--log-raft .object, .object-container--log-raft .object-submerged {
+  background-image: url(../../assets/img/objects/object_log-raft.svg); }
+
+.object-container--log-raft .object-submerged {
+  -webkit-mask-image: url(../../assets/img/objects/object_log-raft.svg);
+          mask-image: url(../../assets/img/objects/object_log-raft.svg); }
+
 .object-container--shark .object, .object-container--shark .object-submerged {
   background-image: url(../../assets/img/objects/object_shark.svg); }
 

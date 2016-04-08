@@ -37,6 +37,15 @@
   }
 }
 
+.object-container--log-raft {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_log-raft.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_log-raft.svg);
+  }
+}
+
 //xl objects
 .object-container--shark {
   .object, .object-submerged {
