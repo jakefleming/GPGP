@@ -233,4 +233,18 @@ var scene = ( function() {
     $( 'body' ).toggleClass( 'pause-animation' );
   });
 
+  $( '.modal-trigger' ).click( function() {
+    var id = $(this).data( 'modal' );
+    var modal = $( '#' + id );
+    var overlay = $( '.modal-overlay' );
+
+    overlay.addClass( 'modal-overlay--show' );
+    modal.addClass( 'modal--show' );
+  });
+
+  $( '.modal-close, .modal-overlay' ).click( function() {
+    $( '.modal' ).removeClass( 'modal--show' );
+    $( '.modal-overlay' ).removeClass( 'modal-overlay--show' );
+  });
+
 })(jQuery, window, document);

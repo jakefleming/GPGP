@@ -1188,6 +1188,50 @@ body {
           transform: translateX(-50%);
   width: 32px; }
 
+.modal {
+  width: 50vw;
+  height: 80vh;
+  top: 10vh;
+  left: 25vw;
+  position: absolute;
+  background: #fff;
+  z-index: 999;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in;
+  -webkit-transform: translate(0, -150%);
+      -ms-transform: translate(0, -150%);
+          transform: translate(0, -150%); }
+  .modal--show {
+    transition: all 0.2s ease-out;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0); }
+
+.modal-overlay {
+  content: '';
+  display: block;
+  z-index: 888;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in; }
+  .modal-overlay--show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.2s ease-out; }
+
+.modal-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-weight: bold;
+  text-decoration: none; }
+
 .object-container--seaweed .object, .object-container--seaweed .object-submerged {
   background-image: url(../../assets/img/objects/object_seaweed.svg); }
 
