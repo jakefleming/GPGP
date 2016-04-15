@@ -1,0 +1,142 @@
+//setting up ui stats
+.ui-stat-container {
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  overflow: hidden;
+  z-index: 9;
+  padding-top: 32px;
+}
+
+.stat {
+  background: linear-gradient(to bottom,  #ffffff 50%,#ccf0ef 100%);
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin-right: 8px;
+  width: 96px;
+  height: 144px;
+  padding: 16px 0;
+  transition: .33s;
+  &:hover {
+    margin-top: -5px;
+  }
+  &__inner {
+    width: 36px;
+    height: 112px;
+    margin: 0 auto;
+    background-repeat: repeat-y;
+  }
+  &--food {
+      .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_food.svg);
+    }
+  }
+  &--water {
+      .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_water.svg);
+    }
+  }
+  &--sanity{
+      .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_sanity.svg);
+    }
+  }
+}
+
+//setting up ui card overlay
+// <div class="ui-object-card-container">
+//     <div class="ui-object-card">
+//       <div class="ui-object-card__close">x</div>
+//       <div class="ui-object-card__image"></div>
+//       <ul class="ui-object-card__choices">
+//         <li class="ui-object-card__choice">Pour out</li>
+//         <li class="ui-object-card__choice">Set free</li>
+//         <li class="ui-object-card__choice">Caress</li>
+//       </ul>
+//       </div>
+//     </div>
+//   </div>
+
+.ui-object-card-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: transparentize(#012E52, .2);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+
+.ui-object-card {
+  font-family: brandon-grotesque;
+  border-radius: $base-radius;
+  width: 100vw;
+  max-width: 320px;
+  margin: 32px auto;
+  background: linear-gradient(to bottom,  #ffffff 50%,#ccf0ef 100%);
+  position: relative;
+}
+
+.ui-object-card__info {
+  border-radius: $base-radius $base-radius 0 0;
+  background: linear-gradient(to bottom,  #ffffff 50%,#ccf0ef 100%);
+  padding: $size-xs/2+px;
+}
+
+.ui-object-card__close {
+  background: linear-gradient(to bottom, #FFD287 0%, #FC2AA1 100%);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px transparentize(#012E52, .5);
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: -$size-xs/2+px;
+  right: -$size-xs/2+px;
+  height: $size-xs+px;
+  width: $size-xs+px;
+  text-align: center;
+  line-height: $size-xs+px;
+}
+
+.ui-object-card__image {
+  height: $size-lg+px;
+  width: $size-lg+px;
+  margin: 0 auto;
+}
+
+.ui-object-card__name {
+  font-size: $size-xs*.75+px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: $size-sm+px;
+  margin: $size-xs/2+px 0 0 0 ;
+  text-align: center;
+  color: #520147;
+}
+
+.ui-object-card__choices {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ui-object-card__choice {
+  cursor: pointer;
+  padding: $size-xs/2+px;
+  box-shadow: 0 -1px 0 transparentize(#012E52, .9);
+  transition: background .33s;
+  &:hover {
+    background: transparentize(#012E52, .97);
+  }
+}
+
+//object types
+.ui-object-card-container {
+  &--oil-barrel {
+    .ui-object-card__image {
+      background-image: url(../../assets/img/objects/object_oil-barrel.svg);
+    }
+  }
+}

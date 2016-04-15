@@ -536,38 +536,6 @@ body {
     font-size: .9rem;
     letter-spacing: 1px; }
 
-.ui-stat-container {
-  position: absolute;
-  bottom: -10px;
-  left: 32px;
-  overflow: hidden;
-  z-index: 9;
-  padding-top: 32px; }
-
-.stat {
-  background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
-  border-radius: 4px;
-  cursor: pointer;
-  float: left;
-  margin-right: 8px;
-  width: 96px;
-  height: 144px;
-  padding: 16px 0;
-  transition: .33s; }
-  .stat:hover {
-    margin-top: -5px; }
-  .stat__inner {
-    width: 36px;
-    height: 112px;
-    margin: 0 auto;
-    background-repeat: repeat-y; }
-  .stat--food .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_food.svg); }
-  .stat--water .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_water.svg); }
-  .stat--sanity .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_sanity.svg); }
-
 .atmosphere-overlay {
   position: absolute;
   z-index: 8;
@@ -1255,9 +1223,116 @@ body {
   -webkit-mask-image: url(../../assets/img/objects/object_log-raft.svg);
           mask-image: url(../../assets/img/objects/object_log-raft.svg); }
 
+.object-container--treasure-chest .object, .object-container--treasure-chest .object-submerged {
+  background-image: url(../../assets/img/objects/object_treasure-chest.svg); }
+
+.object-container--treasure-chest .object-submerged {
+  -webkit-mask-image: url(../../assets/img/objects/object_treasure-chest.svg);
+          mask-image: url(../../assets/img/objects/object_treasure-chest.svg); }
+
 .object-container--shark .object, .object-container--shark .object-submerged {
   background-image: url(../../assets/img/objects/object_shark.svg); }
 
 .object-container--shark .object-submerged {
   -webkit-mask-image: url(../../assets/img/objects/object_shark.svg);
           mask-image: url(../../assets/img/objects/object_shark.svg); }
+
+.ui-stat-container {
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  overflow: hidden;
+  z-index: 9;
+  padding-top: 32px; }
+
+.stat {
+  background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin-right: 8px;
+  width: 96px;
+  height: 144px;
+  padding: 16px 0;
+  transition: .33s; }
+  .stat:hover {
+    margin-top: -5px; }
+  .stat__inner {
+    width: 36px;
+    height: 112px;
+    margin: 0 auto;
+    background-repeat: repeat-y; }
+  .stat--food .stat__inner {
+    background-image: url(../../assets/img/ui/icons/icon_food.svg); }
+  .stat--water .stat__inner {
+    background-image: url(../../assets/img/ui/icons/icon_water.svg); }
+  .stat--sanity .stat__inner {
+    background-image: url(../../assets/img/ui/icons/icon_sanity.svg); }
+
+.ui-object-card-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(1, 46, 82, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: scroll; }
+
+.ui-object-card {
+  font-family: brandon-grotesque;
+  border-radius: 4px;
+  width: 100vw;
+  max-width: 320px;
+  margin: 32px auto;
+  background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
+  position: relative; }
+
+.ui-object-card__info {
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
+  padding: 16px; }
+
+.ui-object-card__close {
+  background: linear-gradient(to bottom, #FFD287 0%, #FC2AA1 100%);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(1, 46, 82, 0.5);
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  line-height: 32px; }
+
+.ui-object-card__image {
+  height: 128px;
+  width: 128px;
+  margin: 0 auto; }
+
+.ui-object-card__name {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 48px;
+  margin: 16px 0 0 0;
+  text-align: center;
+  color: #520147; }
+
+.ui-object-card__choices {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.ui-object-card__choice {
+  cursor: pointer;
+  padding: 16px;
+  box-shadow: 0 -1px 0 rgba(1, 46, 82, 0.1);
+  transition: background .33s; }
+  .ui-object-card__choice:hover {
+    background: rgba(1, 46, 82, 0.03); }
+
+.ui-object-card-container--oil-barrel .ui-object-card__image {
+  background-image: url(../../assets/img/objects/object_oil-barrel.svg); }

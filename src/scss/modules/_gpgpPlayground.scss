@@ -23,52 +23,6 @@ body {
   }
 }
 
-//setting up ui stats
-.ui-stat-container {
-  position: absolute;
-  bottom: -10px;
-  left: 32px;
-  overflow: hidden;
-  z-index: 9;
-  padding-top: 32px;
-}
-
-.stat {
-  background: linear-gradient(to bottom,  #ffffff 50%,#ccf0ef 100%);
-  border-radius: 4px;
-  cursor: pointer;
-  float: left;
-  margin-right: 8px;
-  width: 96px;
-  height: 144px;
-  padding: 16px 0;
-  transition: .33s;
-  &:hover {
-    margin-top: -5px;
-  }
-  &__inner {
-    width: 36px;
-    height: 112px;
-    margin: 0 auto;
-    background-repeat: repeat-y;
-  }
-  &--food {
-      .stat__inner {
-      background-image: url(../../assets/img/ui/icons/icon_food.svg);
-    }
-  }
-  &--water {
-      .stat__inner {
-      background-image: url(../../assets/img/ui/icons/icon_water.svg);
-    }
-  }
-  &--sanity{
-      .stat__inner {
-      background-image: url(../../assets/img/ui/icons/icon_sanity.svg);
-    }
-  }
-}
-
 //testing overlay effects
 .atmosphere-overlay {
   position: absolute;

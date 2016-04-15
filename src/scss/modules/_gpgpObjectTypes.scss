@@ -46,6 +46,15 @@
   }
 }
 
+.object-container--treasure-chest {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_treasure-chest.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_treasure-chest.svg);
+  }
+}
+
 //xl objects
 .object-container--shark {
   .object, .object-submerged {
