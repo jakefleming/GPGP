@@ -38,6 +38,20 @@ var tools = ( function() {
       while( roll > minLimit && roll < maxLimit );
 
       return roll;
+    },
+    generateUUID: function() {
+      var d = new Date().getTime();
+      if( window.performance && typeof window.performance.now === "function" ) {
+        d += performance.now(); //use high-precision timer if available
+      }
+
+      var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = ( d + Math.random() * 16 ) %16 | 0;
+        d = Math.floor( d/16 );
+        return ( c=='x' ? r : ( r&0x3|0x8 ) ).toString( 16 );
+      });
+
+      return uuid;
     }
   };
 }());
@@ -71,29 +85,6 @@ var waves = ( function($) {
   };
 }(jQuery));
 
-var scene = ( function() {
-  'use strict';
-  return {
-    timeOfDay: function() {
-      var d = new Date();
-      var n = d.getHours();
-      if (n > 19 || n < 7) {
-        // If time is after 7PM or before 7AM, apply night theme to ‘body’
-        return 'night beard-2';
-      } else if (n > 16 && n <= 19) {
-        // If time is between 4PM – 7PM sunset theme to ‘body’
-        return 'sunset beard-1';
-      } else {
-        // Else use ‘day’ theme
-        return 'day beard-0';
-      }
-    },
-    setup: function() {
-      document.body.className = scene.timeOfDay();
-    }
-  };
-}());
-
 var objects = ( function($) {
   'use strict';
   return {
@@ -124,48 +115,108 @@ var objects = ( function($) {
   };
 }(jQuery));
 
-var storage = ( function() {
+var scene = ( function() {
   'use strict';
   return {
-    testing: function() {
-      chrome.storage.sync.clear();
-      var name = prompt("What's your name", "Farhad");
-
-      if( name != null ) {
-        chrome.storage.sync.set({
-          'player': {
-            'name': name
-          }
-        }, function() {
-          // Notify that we saved.
-          console.log('Settings saved');
-        });
+    timeOfDay: function() {
+      var d = new Date();
+      var n = d.getHours();
+      if (n > 19 || n < 7) {
+        // If time is after 7PM or before 7AM, apply night theme to ‘body’
+        return 'night beard-2';
+      } else if (n > 16 && n <= 19) {
+        // If time is between 4PM – 7PM sunset theme to ‘body’
+        return 'sunset beard-1';
+      } else {
+        // Else use ‘day’ theme
+        return 'day beard-0';
       }
+    },
+    setup: function() {
+      // Add time based classes to the body
+      document.body.className = scene.timeOfDay();
 
-      var name;
+      // Get the player from storage
+      // var player = storage.getPlayer();
 
-      chrome.storage.sync.get( 'player', function( obj ) {
-        name = obj.player.name;
-      });
-
-      if( !name ) {
-        name = prompt( "What's your name?", "Farhad" );
-        chrome.storage.sync.set({
-          'player': {
-            'name': name
-          }
-        }, function() {
-          // Notify that we saved.
-          console.log('Settings saved');
-        });
-      }
-
-      chrome.storage.sync.get( 'player', function( obj ) {
-        $( '.character__name' ).text( obj.player.name );
-      });
+      // // Does anything exist?
+      // if( !player ) {
+      //   // If not, set up a new player
+      //   // storage.addNewPlayer();
+      // } else {
+      //   // console.log(player);
+      // }
     }
   };
 }());
+
+// var storage = ( function() {
+//   'use strict';
+//   return {
+//     getPlayer: function () {
+//       if( chrome ) {
+//         chrome.storage.sync.get( 'player', function ( p ) { return p.player; });
+//       }
+//     },
+//     addNewPlayer: function() {
+//       if( chrome ) {
+//         console.log( 'calling addNewPlayer...' );
+//
+//         // chrome.storage.sync.set({
+//         //   'player': {
+//         //     'id': tools.generateUUID(),
+//         //     'raft': 'life-raft',
+//         //     'name': 'Enrique',
+//         //     'gender': 'm',
+//         //     'food': 4,
+//         //     'water': 4,
+//         //     'sanity': 4,
+//         //     'createdOn': Date.now()
+//         //   }
+//         // }, function() {
+//         //   console.log( '✔ player added' );
+//         // });
+//       }
+//     },
+//     testing: function() {
+//       chrome.storage.sync.clear();
+//       var name = prompt("What's your name", "Farhad");
+//
+//       if( name != null ) {
+//         chrome.storage.sync.set({
+//           'player': {
+//             'name': name
+//           }
+//         }, function() {
+//           // Notify that we saved.
+//           console.log('Settings saved');
+//         });
+//       }
+//
+//       var name;
+//
+//       chrome.storage.sync.get( 'player', function( obj ) {
+//         name = obj.player.name;
+//       });
+//
+//       if( !name ) {
+//         name = prompt( "What's your name?", "Farhad" );
+//         chrome.storage.sync.set({
+//           'player': {
+//             'name': name
+//           }
+//         }, function() {
+//           // Notify that we saved.
+//           console.log('Settings saved');
+//         });
+//       }
+//
+//       chrome.storage.sync.get( 'player', function( obj ) {
+//         $( '.character__name' ).text( obj.player.name );
+//       });
+//     }
+//   };
+// }());
 
 // IIFE
 (function ($, window, document, undefined) {
@@ -175,7 +226,6 @@ var storage = ( function() {
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
-  // storage.testing();
 
   // Events
 
