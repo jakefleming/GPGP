@@ -1,3 +1,17 @@
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: $color-sea;
+  text-align: center;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    background: darken($color-sea, 5%);
+  }
+}
+
 //setting up ui stats
 .ui-stat-container {
   position: absolute;

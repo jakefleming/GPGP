@@ -1206,6 +1206,8 @@ body {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0); }
+  .modal-image img {
+    max-width: 100%; }
 
 .modal-overlay {
   content: '';
@@ -1227,10 +1229,12 @@ body {
 
 .modal-close {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: -3rem;
+  top: -4rem;
+  font-size: 4rem;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #fff; }
 
 .object-container--seaweed .object, .object-container--seaweed .object-submerged {
   background-image: url(../../assets/img/objects/object_seaweed.svg); }
@@ -1280,6 +1284,17 @@ body {
 .object-container--shark .object-submerged {
   -webkit-mask-image: url(../../assets/img/objects/object_shark.svg);
           mask-image: url(../../assets/img/objects/object_shark.svg); }
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #46afdb;
+  text-align: center;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fff; }
+  .btn:hover {
+    background: #31a6d7; }
 
 .ui-stat-container {
   position: absolute;

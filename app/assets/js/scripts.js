@@ -234,7 +234,7 @@ var scene = ( function() {
   });
 
   $( '.modal-trigger' ).click( function() {
-    var id = $(this).data( 'modal' );
+    var id = $( this ).data( 'modal' );
     var modal = $( '#' + id );
     var overlay = $( '.modal-overlay' );
 
@@ -246,5 +246,13 @@ var scene = ( function() {
     $( '.modal' ).removeClass( 'modal--show' );
     $( '.modal-overlay' ).removeClass( 'modal-overlay--show' );
   });
+
+  $( '.modal-btn' ).click( function() {
+    var food = $( this ).data( 'food' );
+    var water = $( this ).data( 'water' );
+    var sanity = $( this ).data( 'sanity' );
+
+    
+  })
 
 })(jQuery, window, document);
