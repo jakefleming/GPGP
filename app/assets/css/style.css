@@ -377,15 +377,6 @@ td,
 th {
   padding: 0; }
 
-.logo {
-  margin: -58px 0 0 -100px;
-  position: absolute;
-  top: 50%;
-  left: 50%; }
-
-.nav ul {
-  list-style: none; }
-
 @font-face {
   font-family: 'Font-Name';
   src: url("../fonts/font-name.eot");
@@ -413,135 +404,56 @@ th {
   color: #fff;
   text-shadow: none; }
 
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important; }
-  a,
-  a:visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100% !important; }
-  @page {
-    margin: 0.5cm; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-  h2,
-  h3 {
-    page-break-after: avoid; } }
-
-.wave-container {
-  height: 100vh;
-  width: 100vh;
-  overflow: hidden; }
-
-.wave-group {
-  width: 112px;
+.modal {
+  width: 50vw;
+  height: 80vh;
+  top: 10vh;
+  left: 25vw;
   position: absolute;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s; }
+  background: #fff;
+  z-index: 999;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in;
+  -webkit-transform: translate(0, -150%);
+      -ms-transform: translate(0, -150%);
+          transform: translate(0, -150%); }
+  .modal--show {
+    transition: all 0.2s ease-out;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  .modal-image {
+    width: 50%;
+    margin: 0 auto; }
+    .modal-image img {
+      max-width: 100%; }
 
-.wave {
-  height: 2px;
-  border-radius: 2px;
-  width: 16px;
-  margin-bottom: 10px;
-  display: inline-block; }
-  .wave.a {
-    width: 64px;
-    margin-bottom: 20px;
-    background: rgba(106, 236, 250, 0.4); }
-  .wave.b {
-    width: 16px;
-    margin-bottom: 20px;
-    background: rgba(8, 223, 246, 0.4); }
-  .wave.c {
-    width: 48px;
-    margin-bottom: 30px;
-    background: rgba(57, 230, 248, 0.4); }
-  .wave.d {
-    width: 16px;
-    margin-bottom: 20px;
-    background: rgba(205, 249, 253, 0.4); }
-  .wave.e {
-    width: 32px;
-    margin-bottom: 10px;
-    background: rgba(155, 242, 252, 0.4); }
-
-@-webkit-keyframes wave-bob {
-  0% {
-    -webkit-transform: translate(0, 0) rotate(-3deg);
-            transform: translate(0, 0) rotate(-3deg); }
-  60% {
-    -webkit-transform: translate(0, -10px) rotate(3deg);
-            transform: translate(0, -10px) rotate(3deg); }
-  100% {
-    -webkit-transform: translate(0, 0) rotate(-3deg);
-            transform: translate(0, 0) rotate(-3deg); } }
-
-@keyframes wave-bob {
-  0% {
-    -webkit-transform: translate(0, 0) rotate(-3deg);
-            transform: translate(0, 0) rotate(-3deg); }
-  60% {
-    -webkit-transform: translate(0, -10px) rotate(3deg);
-            transform: translate(0, -10px) rotate(3deg); }
-  100% {
-    -webkit-transform: translate(0, 0) rotate(-3deg);
-            transform: translate(0, 0) rotate(-3deg); } }
-
-.wave-bob {
-  -webkit-animation-name: wave-bob;
-          animation-name: wave-bob; }
-
-body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
-  background: #46afdb;
-  /* Old browsers */
-  background: linear-gradient(to bottom, #46afdb 0, #59f0e8 100%); }
-
-.dev-mode {
-  display: none; }
-  .dev-mode span,
-  .dev-mode a {
-    padding: 1rem 0 1rem 1rem;
-    color: #fff;
-    z-index: 1000;
-    display: inline-block;
-    text-decoration: none;
-    opacity: 0.5;
-    text-transform: uppercase;
-    font-size: .9rem;
-    letter-spacing: 1px; }
-
-.atmosphere-overlay {
+.modal-overlay {
+  content: '';
+  display: block;
+  z-index: 888;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  z-index: 8;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; }
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in; }
+  .modal-overlay--show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.2s ease-out; }
+
+.modal-close {
+  position: absolute;
+  right: -3rem;
+  top: -4rem;
+  font-size: 4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff; }
 
 .pause-animation * {
   transition: none !important;
@@ -871,6 +783,70 @@ body {
     -webkit-transform: translate(-50%, 0) rotate(2deg);
             transform: translate(-50%, 0) rotate(2deg); } }
 
+.wave-container {
+  height: 100vh;
+  width: 100vh;
+  overflow: hidden; }
+
+.wave-group {
+  width: 112px;
+  position: absolute;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s; }
+
+.wave {
+  height: 2px;
+  border-radius: 2px;
+  width: 16px;
+  margin-bottom: 10px;
+  display: inline-block; }
+  .wave.a {
+    width: 64px;
+    margin-bottom: 20px;
+    background: rgba(106, 236, 250, 0.4); }
+  .wave.b {
+    width: 16px;
+    margin-bottom: 20px;
+    background: rgba(8, 223, 246, 0.4); }
+  .wave.c {
+    width: 48px;
+    margin-bottom: 30px;
+    background: rgba(57, 230, 248, 0.4); }
+  .wave.d {
+    width: 16px;
+    margin-bottom: 20px;
+    background: rgba(205, 249, 253, 0.4); }
+  .wave.e {
+    width: 32px;
+    margin-bottom: 10px;
+    background: rgba(155, 242, 252, 0.4); }
+
+@-webkit-keyframes wave-bob {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); }
+  60% {
+    -webkit-transform: translate(0, -10px) rotate(3deg);
+            transform: translate(0, -10px) rotate(3deg); }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); } }
+
+@keyframes wave-bob {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); }
+  60% {
+    -webkit-transform: translate(0, -10px) rotate(3deg);
+            transform: translate(0, -10px) rotate(3deg); }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-3deg);
+            transform: translate(0, 0) rotate(-3deg); } }
+
+.wave-bob {
+  -webkit-animation-name: wave-bob;
+          animation-name: wave-bob; }
+
 .character {
   height: 128px;
   left: 50%;
@@ -1188,57 +1164,6 @@ body {
           transform: translateX(-50%);
   width: 32px; }
 
-.modal {
-  width: 50vw;
-  height: 80vh;
-  top: 10vh;
-  left: 25vw;
-  position: absolute;
-  background: #fff;
-  z-index: 999;
-  padding: 1.5rem;
-  transition: all 0.2s ease-in;
-  -webkit-transform: translate(0, -150%);
-      -ms-transform: translate(0, -150%);
-          transform: translate(0, -150%); }
-  .modal--show {
-    transition: all 0.2s ease-out;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0); }
-  .modal-image {
-    width: 50%;
-    margin: 0 auto; }
-    .modal-image img {
-      max-width: 100%; }
-
-.modal-overlay {
-  content: '';
-  display: block;
-  z-index: 888;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.65);
-  pointer-events: none;
-  opacity: 0;
-  transition: all 0.2s ease-in; }
-  .modal-overlay--show {
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.2s ease-out; }
-
-.modal-close {
-  position: absolute;
-  right: -3rem;
-  top: -4rem;
-  font-size: 4rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff; }
-
 .object-container--seaweed-1 .object, .object-container--seaweed-1 .object-submerged {
   background-image: url(../../assets/img/objects/object_seaweed.svg); }
 
@@ -1396,3 +1321,30 @@ body {
 
 .ui-object-card-container--oil-barrel .ui-object-card__image {
   background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
+
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
+  background: #46afdb;
+  /* Old browsers */
+  background: linear-gradient(to bottom, #46afdb 0, #59f0e8 100%); }
+
+.dev-mode {
+  display: none; }
+  .dev-mode span,
+  .dev-mode a {
+    padding: 1rem 0 1rem 1rem;
+    color: #fff;
+    z-index: 1000;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1px; }
+
+.atmosphere-overlay {
+  position: absolute;
+  z-index: 8;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; }

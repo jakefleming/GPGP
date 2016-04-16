@@ -19,42 +19,23 @@
 // PARTIALS
 //----------------------------------*/
 
-@import 'partials/_header.scss';
-@import 'partials/_nav.scss';
-@import 'partials/_sidebar.scss';
-@import 'partials/_main.scss';
-@import 'partials/_footer.scss';
+
 
 //----------------------------------*\
 // OBJECTS & MODULES
 //----------------------------------*/
 
-@import 'modules/_buttons.scss';
-@import 'modules/_inputs.scss';
-@import 'modules/_lists.scss';
 @import 'modules/_typography.scss';
 @import 'modules/_misc.scss';
-@import 'modules/_app.scss';
+@import 'modules/_modals.scss';
 
-// Enhancement modules
+@import 'modules/_animations.scss';
+@import 'modules/_waves.scss';
+@import 'modules/_character.scss';
+@import 'modules/_object-base.scss';
+@import 'modules/_object-types.scss';
+
+@import 'modules/_ui.scss';
+@import 'modules/_main.scss';
+
 @import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
-
-//----------------------------------*\
-// VENDOR
-//----------------------------------*/
-
-@import 'vendor/_external.scss';
-
-//----------------------------------*\
-// WEEEEEeeeeee
-//----------------------------------*/
-
-@import 'modules/_gpgpWaves.scss';
-@import 'modules/_gpgpPlayground.scss';
-@import 'modules/_gpgpAnimations.scss';
-@import 'modules/_gpgpCharacter.scss';
-@import 'modules/_gpgpObjectBase.scss';
-@import 'modules/_gpgpModals.scss';
-@import 'modules/_gpgpObjectTypes.scss';
-@import 'modules/_gpgpUI.scss';
