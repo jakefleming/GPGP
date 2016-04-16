@@ -27,6 +27,7 @@ var banner = [
 
 var config = {
   jsPaths: [
+    'src/js/modules/_config.js',
     'src/js/modules/*',
     'src/js/scripts.js'
   ],

@@ -6,21 +6,24 @@
  * @version 1.0.0
  * Copyright 2016. MIT licensed.
  */
-var config = {
-  'waveMultiplier': 6,
-  'waveTypes': [
-    '<div class="wave a"></div>',
-    '<div class="wave b"></div>',
-    '<div class="wave c"></div>',
-    '<div class="wave d"></div>',
-    '<div class="wave e"></div>',
-    '<div class="wave a"></div><div class="wave b"></div>',
-    '<div class="wave d"></div><div class="wave e"></div>',
-    '<div class="wave b"></div><div class="wave a"></div><div class="wave b"></div>',
-    '<div class="wave c"></div><div class="wave d"></div><div class="wave b"></div>'
-  ],
-  'waveTiming': 4
-};
+var config = ( function() {
+  'use strict';
+  return {
+    'waveMultiplier': 6,
+    'waveTypes': [
+      '<div class="wave a"></div>',
+      '<div class="wave b"></div>',
+      '<div class="wave c"></div>',
+      '<div class="wave d"></div>',
+      '<div class="wave e"></div>',
+      '<div class="wave a"></div><div class="wave b"></div>',
+      '<div class="wave d"></div><div class="wave e"></div>',
+      '<div class="wave b"></div><div class="wave a"></div><div class="wave b"></div>',
+      '<div class="wave c"></div><div class="wave d"></div><div class="wave b"></div>'
+    ],
+    'waveTiming': 4
+  };
+}());
 
 // For distributing objects
 var objects = ( function($) {
