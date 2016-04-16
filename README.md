@@ -1,6 +1,6 @@
 # Great Pacific Garbage Patch
 
-## Run GPGP in Chrome
+### Run GPGP in Chrome
 
 1. Clone / download the repo
 
@@ -12,7 +12,7 @@
 
 4. Navigate to the folder where you stored the repo you downloaded in step 1
 
-To update to the latest build
+### To update to the latest build
 
 1. Either download the repo to the same location, or do `git pull` from the local install
 
@@ -20,13 +20,13 @@ To update to the latest build
 
 3. Click `Reload (⌘R)` on the Great Pacific Garbage Patch Extension
 
-## Develop locally
+### Develop locally
 
 1. Clone the repo
 
 2. Run `npm start` from the local repo location
 
-## Todo
+### Todo
 
 &#10004; Implement nunjucks
 
