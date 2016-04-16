@@ -22,84 +22,37 @@ var config = {
   'waveTiming': 4
 };
 
-// Utilities like random number generators
-var tools = ( function() {
-  'use strict';
-  return {
-    random: function( min, max ) {
-      return Math.floor( Math.random() * ( max - min + 1) + min );
-    },
-    randomRange: function( min, max, minLimit, maxLimit ) {
-      var roll;
-
-      do {
-        roll = tools.random( min, max );
-      }
-      while( roll > minLimit && roll < maxLimit );
-
-      return roll;
-    },
-    generateUUID: function() {
-      var d = new Date().getTime();
-      if( window.performance && typeof window.performance.now === "function" ) {
-        d += performance.now(); //use high-precision timer if available
-      }
-
-      var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = ( d + Math.random() * 16 ) %16 | 0;
-        d = Math.floor( d/16 );
-        return ( c=='x' ? r : ( r&0x3|0x8 ) ).toString( 16 );
-      });
-
-      return uuid;
-    }
-  };
-}());
-
-var waves = ( function($) {
-  'use strict';
-  return {
-    spreadWaves: function() {
-
-      // Array of wave types
-      var wave = config.waveTypes;
-      // Number of times we'll create the array of wave types
-      var waveMultiplier = config.waveMultiplier;
-
-      for( var i = 0; i < waveMultiplier; i++ ) {
-        for( var j = 0; j < wave.length; j++ ) {
-
-          var left = tools.random( 0, 100 );
-          var top = tools.random( 0, 100 );
-
-          // Delay the animation by how far from the left waves are. Creates a ripple effect.
-          var delay = config.waveTiming * ( left / 100 );
-
-          $( '.wave-container' ).append( '<div class="wave-group animated infinite wave-bob" id="group_'+ i + '_' + j +'"' +
-            'style="left: '+ left +'vw; top: '+ top +'vh; animation-delay: -'+ delay +'s;"' +
-            '>');
-          $( '#group_' + i + '_' + j ).append( wave[j] );
-        }
-      }
-    }
-  };
-}(jQuery));
-
+// For distributing objects
 var objects = ( function($) {
   'use strict';
   return {
+    isAHit( a, b ) {
+      return !(
+        ((a.y + a.height) < (b.y)) ||
+        (a.y > (b.y + b.height)) ||
+        ((a.x + a.width) < b.x) ||
+        (a.x > (b.x + b.width))
+      );
+    },
     spreadObjects: function() {
-      // function isCollide(a, b) {
-      //     return !(
-      //         ((a.y + a.height) < (b.y)) ||
-      //         (a.y > (b.y + b.height)) ||
-      //         ((a.x + a.width) < b.x) ||
-      //         (a.x > (b.x + b.width))
-      //     );
-      // }
+      var rigidBodies = [
+        [ 40, 40, 20, 20 ],
+        [ 0, 90, 35, 10 ]
+      ];
+
       $( '.object-container' ).each( function() {
+
+
         var top   = tools.randomRange( 10, 90, 38, 68 );
         var left  = tools.randomRange( 10, 90, 38, 68 );
+
+        for( var i = 0; i < rigidBodies.length; i++ ) {
+          var rB = rigidBodies[i];
+
+
+        }
+
+        // console.log( 'top is a ' + objects.isAHit( top, rigidBodies ) );
         var z     = Math.floor( top ) + ( $(this).height() / 8);
         var delay = config.waveTiming * ( left / 100 ) * -1 + 's';
 
@@ -115,6 +68,7 @@ var objects = ( function($) {
   };
 }(jQuery));
 
+// Set up the scene, and apply body classes
 var scene = ( function() {
   'use strict';
   return {
@@ -150,6 +104,7 @@ var scene = ( function() {
   };
 }());
 
+// // Manipulate data on the chrome storage object. Only works in a new tab.
 // var storage = ( function() {
 //   'use strict';
 //   return {
@@ -218,6 +173,70 @@ var scene = ( function() {
 //   };
 // }());
 
+// Utilities like random number generators
+var tools = ( function() {
+  'use strict';
+  return {
+    random: function( min, max ) {
+      return Math.floor( Math.random() * ( max - min + 1) + min );
+    },
+    randomRange: function( min, max, minLimit, maxLimit ) {
+      var roll;
+
+      do {
+        roll = tools.random( min, max );
+      }
+      while( roll > minLimit && roll < maxLimit );
+
+      return roll;
+    },
+    generateUUID: function() {
+      var d = new Date().getTime();
+      if( window.performance && typeof window.performance.now === "function" ) {
+        d += performance.now(); //use high-precision timer if available
+      }
+
+      var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = ( d + Math.random() * 16 ) %16 | 0;
+        d = Math.floor( d/16 );
+        return ( c=='x' ? r : ( r&0x3|0x8 ) ).toString( 16 );
+      });
+
+      return uuid;
+    }
+  };
+}());
+
+// For distributing waves on initial load
+var waves = ( function($) {
+  'use strict';
+  return {
+    spreadWaves: function() {
+
+      // Array of wave types
+      var wave = config.waveTypes;
+      // Number of times we'll create the array of wave types
+      var waveMultiplier = config.waveMultiplier;
+
+      for( var i = 0; i < waveMultiplier; i++ ) {
+        for( var j = 0; j < wave.length; j++ ) {
+
+          var left = tools.random( 0, 100 );
+          var top = tools.random( 0, 100 );
+
+          // Delay the animation by how far from the left waves are. Creates a ripple effect.
+          var delay = config.waveTiming * ( left / 100 );
+
+          $( '.wave-container' ).append( '<div class="wave-group animated infinite wave-bob" id="group_'+ i + '_' + j +'"' +
+            'style="left: '+ left +'vw; top: '+ top +'vh; animation-delay: -'+ delay +'s;"' +
+            '>');
+          $( '#group_' + i + '_' + j ).append( wave[j] );
+        }
+      }
+    }
+  };
+}(jQuery));
+
 // IIFE
 (function ($, window, document, undefined) {
 
@@ -268,7 +287,7 @@ var scene = ( function() {
     sanityCard.css({ 'height': sanityCard.height() + (statUnit * sanity) });
 
     // Put in inventory?
-    if( keep == true ) {
+    if( keep === true ) {
       // Put the thing in inventory
       console.log( 'thing is inventory' );
     }

@@ -9,6 +9,7 @@ var gulp            = require('gulp'),
     minifyCSS       = require('gulp-minify-css'),
     nunjucksRender  = require('gulp-nunjucks-render'),
     data            = require('gulp-data'),
+    concat          = require('gulp-concat'),
     package         = require('./package.json');
 
 
@@ -26,9 +27,8 @@ var banner = [
 
 var config = {
   jsPaths: [
-    'src/js/underscore-min.js',
-    'src/js/velocity.min.js',
-    'src/js/**/*'
+    'src/js/modules/*',
+    'src/js/scripts.js'
   ],
   htmlPaths: [
     'src/templates/*.+(html|nunjucks)'
@@ -56,6 +56,7 @@ gulp.task( 'css', function() {
 gulp.task( 'js', function() {
   gulp.src( config.jsPaths )
     .pipe(jshint('.jshintrc'))
+    .pipe(concat('scripts.js'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
     .pipe(gulp.dest('app/assets/js'))
