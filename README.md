@@ -5,7 +5,7 @@ Run it: `gulp`
 
 ## Todo
 
-* Implement nunjucks
-* Clean up CSS files
-* Figure out how to break js into multiple files
+&#10004; Implement nunjucks
+&#10004; Clean up CSS files
+&#10004; Figure out how to break js into multiple files
 * Minify and compile for production
