@@ -50,11 +50,11 @@ gulp.task( 'css', function() {
   return gulp.src('src/scss/style.scss')
   .pipe(sass({errLogToConsole: true}))
   .pipe(autoprefixer('last 4 version'))
-  .pipe(gulp.dest('app/assets/css'))
+  .pipe(gulp.dest('dist/assets/css'))
   .pipe(minifyCSS())
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { package : package }))
-  .pipe(gulp.dest('app/assets/css'))
+  .pipe(gulp.dest('dist/assets/css'))
   .pipe(browserSync.reload({stream:true}));
 });
 
@@ -64,18 +64,18 @@ gulp.task( 'js', function() {
     .pipe(concat('scripts.js'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
-    .pipe(gulp.dest('app/assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('app/assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
 gulp.task( 'browser-sync', function() {
   browserSync.init(null, {
     server: {
-      baseDir: "app"
+      baseDir: "dist"
     }
   });
 });
@@ -89,7 +89,7 @@ gulp.task( 'html', function() {
   }))
   .pipe(nunjucksRender())
   .pipe(rename({ basename: 'index' }))
-  .pipe(gulp.dest('app'))
+  .pipe(gulp.dest('dist'))
   .pipe(browserSync.reload({stream:true}));
 });
 
