@@ -26,19 +26,19 @@ var config = {
 var objects = ( function($) {
   'use strict';
   return {
-    isAHit( a, b ) {
-      return !(
-        ((a.y + a.height) < (b.y)) ||
-        (a.y > (b.y + b.height)) ||
-        ((a.x + a.width) < b.x) ||
-        (a.x > (b.x + b.width))
-      );
-    },
+    // isAHit( a, b ) {
+    //   return !(
+    //     ((a.y + a.height) < (b.y)) ||
+    //     (a.y > (b.y + b.height)) ||
+    //     ((a.x + a.width) < b.x) ||
+    //     (a.x > (b.x + b.width))
+    //   );
+    // },
     spreadObjects: function() {
-      var rigidBodies = [
-        [ 40, 40, 20, 20 ],
-        [ 0, 90, 35, 10 ]
-      ];
+      // var rigidBodies = [
+      //   [ 40, 40, 20, 20 ],
+      //   [ 0, 90, 35, 10 ]
+      // ];
 
       $( '.object-container' ).each( function() {
 
@@ -46,11 +46,11 @@ var objects = ( function($) {
         var top   = tools.randomRange( 10, 90, 38, 68 );
         var left  = tools.randomRange( 10, 90, 38, 68 );
 
-        for( var i = 0; i < rigidBodies.length; i++ ) {
-          var rB = rigidBodies[i];
-
-
-        }
+        // for( var i = 0; i < rigidBodies.length; i++ ) {
+        //   var rB = rigidBodies[i];
+        //
+        //
+        // }
 
         // console.log( 'top is a ' + objects.isAHit( top, rigidBodies ) );
         var z     = Math.floor( top ) + ( $(this).height() / 8);
