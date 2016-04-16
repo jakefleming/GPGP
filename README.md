@@ -5,4 +5,7 @@ Run it: `gulp`
 
 ## Todo
 
-* Sort z-indexes so that objects lower on the screen have a higher z-index than those higher
+* Implement nunjucks
+* Clean up CSS files
+* Figure out how to break js into multiple files
+* Minify and compile for production

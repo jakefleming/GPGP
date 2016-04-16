@@ -1,24 +1,32 @@
 {
-  "name": "fastshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "author": "Hossein Karami",
-  "url": "https://HosseinKarami.github.io/fastshell",
-  "version": "1.0.5",
+  "name": "GPGP",
+  "title": "Great Pacific Garbage Patch",
+  "author": "Jake Fleming & Zac Halbert",
+  "url": "https://www.github.com/jakefleming/GPGP",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/HosseinKarami/fastshell.git"
+    "url": "https://www.github.com/jakefleming/GPGP"
   },
   "devDependencies": {
-    "browser-sync": "^2.10.0",
+    "browser-sync": "^2.12.3",
+    "engine.io": "^1.6.8",
+    "engine.io-parser": "^1.2.4",
+    "express": "^4.13.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-header": "^1.7.1",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-css": "^1.2.2",
+    "gulp-nunjucks-render": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "gulp-uglify": "^1.5.1",
     "jshint": "^2.8.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp"
   }
 }
