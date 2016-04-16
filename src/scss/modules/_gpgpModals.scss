@@ -15,8 +15,13 @@
     transform: translate(0 , 0);
   }
 
-  &-image img {
-    max-width: 100%;
+  &-image {
+    width: 50%;
+    margin: 0 auto;
+    
+    img {
+      max-width: 100%;
+    }
   }
 }
 

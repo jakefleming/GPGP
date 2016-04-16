@@ -8,6 +8,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     minifyCSS       = require('gulp-minify-css'),
     nunjucksRender  = require('gulp-nunjucks-render'),
+    data            = require('gulp-data'),
     package         = require('./package.json');
 
 
@@ -33,6 +34,12 @@ var config = {
     'src/templates/*.+(html|nunjucks)'
   ]
 };
+
+// De-caching for Data files
+function requireUncached( $module ) {
+  delete require.cache[require.resolve( $module )];
+  return require( $module );
+}
 
 gulp.task( 'css', function() {
   return gulp.src('src/scss/style.scss')
@@ -71,13 +78,17 @@ gulp.task( 'html', function() {
   nunjucksRender.nunjucks.configure(['src/templates/']);
 
   return gulp.src( 'src/templates/layout.html' )
+  .pipe( data( function( file ) {
+    return requireUncached('./src/templates/objects/objects.json');
+  }))
   .pipe(nunjucksRender())
   .pipe(rename({ basename: 'index' }))
   .pipe(gulp.dest('app'))
+  .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('default', ['css', 'js', 'html', 'browser-sync'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("src/templates/*.html", ['html']);
+    gulp.watch("src/templates/**/*.+(html|json)", ['html']);
 });

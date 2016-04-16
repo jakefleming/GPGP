@@ -20,28 +20,11 @@
 </head>
 
 <body>
-  <h1>YAY!</h1>
-
   <div class="dev-mode" style="display: block;">
     <span>dev mode: </span>
     <a href="#" class="pause-animation--btn">Pause</a>
   </div>
-  <!--
-  <div class="ui-object-card-container ui-object-card-container--oil-barrel">
-  <div class="ui-object-card">
-  <div class="ui-object-card__close">&times;</div>
-  <div class="ui-object-card__info">
-  <div class="ui-object-card__image"></div>
-  <div class="ui-object-card__name">Oil Barrel</div>
-</div>
-<ul class="ui-object-card__choices">
-<li class="ui-object-card__choice">Pour out</li>
-<li class="ui-object-card__choice">Set free</li>
-<li class="ui-object-card__choice">Caress</li>
-</ul>
-</div>
-</div>
-</div> -->
+
 
 <div class="ui-stat-container">
   <div class="stat stat--food">
@@ -54,172 +37,228 @@
     <div class="stat__inner"></div>
   </div>
 </div>
-<div class="atmosphere-overlay"></div>
-
-<div class="wave-container">
-</div>
-
-<div data-modal="inventory" class="raft-container modal-trigger object-container--life-raft bob-normal rotate-normal">
-  <div class="object-rig">
-    <div class="object-submerged-container">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="character character--has-hat">
-            <div class="character__torso">
-              <div class="character__head">
-                <div class="character__hat character__hat--seaweed"></div>
-              </div>
-              <div class="character__arm character__arm--L"></div>
-              <div class="character__arm character__arm--R"></div>
-            </div>
-            <div class="character__leg character__leg--L"></div>
-            <div class="character__leg character__leg--R"></div>
-          </div>
-          <div class="object-submerged"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="object-rig">
-    <div class="object-mask">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="character character--has-hat">
-            <div class="character__torso">
-              <div class="character__head">
-                <div class="character__hat character__hat--seaweed"></div>
-              </div>
-              <div class="character__arm character__arm--L"></div>
-              <div class="character__arm character__arm--R"></div>
-            </div>
-            <div class="character__leg character__leg--L"></div>
-            <div class="character__leg character__leg--R"></div>
-          </div>
-          <div class="object"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div data-modal="oil-barrel-1" class="object-container modal-trigger object-container--lg object-container--oil-barrel object-container--new bob-heavy rotate-45">
-  <div class="object-rig">
-    <div class="object-submerged-container">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object-submerged"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="object-rig">
-    <div class="object-mask">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div data-modal="seaweed-1" class="object-container modal-trigger object-container--sm object-container--seaweed bob-normal rotate-normal">
-  <div class="object-rig">
-    <div class="object-submerged-container">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object-submerged"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="object-rig">
-    <div class="object-mask">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div data-modal="eco-water-1" class="object-container modal-trigger object-container--sm object-container--eco-water bob-heavy rotate-45">
-  <div class="object-rig">
-    <div class="object-submerged-container">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object-submerged"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="object-rig">
-    <div class="object-mask">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div data-modal="treasure-chest-1" class="object-container modal-trigger object-container--lg object-container--treasure-chest bob-heavy">
-  <div class="object-rig">
-    <div class="object-submerged-container">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object-submerged"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="object-rig">
-    <div class="object-mask">
-      <div class="object-rig__bob">
-        <div class="object-rig__rotate">
-          <div class="object"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="modal-overlay"></div>
+<div class="atmosphere-overlay"></div>
+<div class="wave-container"></div>
 
-<div class="modal modal-container" id="inventory">
-  <a href="#" class="modal-close">&times;</a>
-  Inventory modal
+<div data-modal="inventory" class="raft-container modal-trigger object-container--life-raft-1 bob-normal rotate-normal">
+  <div class="object-rig">
+    <div class="object-submerged-container">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="character character--has-hat">
+            <div class="character__torso">
+              <div class="character__head">
+                <div class="character__hat character__hat--seaweed"></div>
+              </div>
+              <div class="character__arm character__arm--L"></div>
+              <div class="character__arm character__arm--R"></div>
+            </div>
+            <div class="character__leg character__leg--L"></div>
+            <div class="character__leg character__leg--R"></div>
+          </div>
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="object-rig">
+    <div class="object-mask">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="character character--has-hat">
+            <div class="character__torso">
+              <div class="character__head">
+                <div class="character__hat character__hat--seaweed"></div>
+              </div>
+              <div class="character__arm character__arm--L"></div>
+              <div class="character__arm character__arm--R"></div>
+            </div>
+            <div class="character__leg character__leg--L"></div>
+            <div class="character__leg character__leg--R"></div>
+          </div>
+          <div class="object"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="modal modal-container" id="treasure-chest-1">
-  <a href="#" class="modal-close">&times;</a>
-  Treasure chest modal
+
+
+<div data-modal="oil-barrel-1" class="object-container--lg object-container--oil-barrel-1 bob-heavy rotate-45 object-container modal-trigger object-container--new">
+  <div class="object-rig">
+    <div class="object-submerged-container">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="object-rig">
+    <div class="object-mask">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 <div class="modal modal-container" id="oil-barrel-1">
   <a href="#" class="modal-close">&times;</a>
   <div class="modal-image">
-    <img src="http://www.fillmurray.com/600/300" alt="">
+    <img src="assets/img/objects/object_oil-barrel.svg" alt="">
   </div>
   <div class="modal-content">
     <h3>Oil Barrel</h3>
     <p>Some stuff about oil barrels...</p>
     <div class="modal-options">
-      <a href="#" class="btn modal-btn" data-food="1" data-water="0" data-sanity="0" data-keep="false">Eat what you find inside (+food)</a>
-      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Caress fondly (+sanity)</a>
-      <a href="#" class="btn modal-btn" data-food="0" data-water="2" data-sanity="0" data-keep="false">Shotgun (++water)</a>
-      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="true">Keep (+sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="2" data-water="0" data-sanity="0" data-keep="false">Eat what you find inside (++food)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Caress tenderly (+sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="2" data-sanity="0" data-keep="false">Drink from (++water)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="true">Keep</a>
+      
     </div>
   </div>
 </div>
-<div class="modal modal-container" id="eco-water-1">
-  <a href="#" class="modal-close">&times;</a>
-  Eco water modal
+
+<div data-modal="seaweed-1" class="object-container--sm object-container--seaweed-1 bob-normal rotate-normal object-container modal-trigger object-container--new">
+  <div class="object-rig">
+    <div class="object-submerged-container">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="object-rig">
+    <div class="object-mask">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 <div class="modal modal-container" id="seaweed-1">
   <a href="#" class="modal-close">&times;</a>
-  Seaweed modal
+  <div class="modal-image">
+    <img src="assets/img/objects/object_seaweed.svg" alt="">
+  </div>
+  <div class="modal-content">
+    <h3>Seaweed</h3>
+    <p>Some stuff about seaweed...</p>
+    <div class="modal-options">
+      
+      <a href="#" class="btn modal-btn" data-food="1" data-water="0" data-sanity="0" data-keep="false">Eat what you find inside (+food)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Caress tenderly (+sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="2" data-sanity="0" data-keep="false">Drink from (++water)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="true">Keep</a>
+      
+    </div>
+  </div>
 </div>
+
+<div data-modal="eco-water-1" class="object-container--sm object-container--eco-water-1 bob-heavy rotate-45 object-container modal-trigger object-container--new">
+  <div class="object-rig">
+    <div class="object-submerged-container">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="object-rig">
+    <div class="object-mask">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-container" id="eco-water-1">
+  <a href="#" class="modal-close">&times;</a>
+  <div class="modal-image">
+    <img src="assets/img/objects/object_eco-water.svg" alt="">
+  </div>
+  <div class="modal-content">
+    <h3>Eco Water</h3>
+    <p>Saving the earth, one plastic bottle at a time...</p>
+    <div class="modal-options">
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="2" data-sanity="0" data-keep="false">Drink (++water)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Scream at, then apologize to (++sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Tell joke to (+sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="true">Keep</a>
+      
+    </div>
+  </div>
+</div>
+
+<div data-modal="treasure-chest-1" class="object-container--lg object-container--treasure-chest-1 bob-heavy rotate-normal object-container modal-trigger object-container--new">
+  <div class="object-rig">
+    <div class="object-submerged-container">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object-submerged"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="object-rig">
+    <div class="object-mask">
+      <div class="object-rig__bob">
+        <div class="object-rig__rotate">
+          <div class="object"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-container" id="treasure-chest-1">
+  <a href="#" class="modal-close">&times;</a>
+  <div class="modal-image">
+    <img src="assets/img/objects/object_treasure-chest.svg" alt="">
+  </div>
+  <div class="modal-content">
+    <h3>Treasure Chest</h3>
+    <p>Some stuff about treasure...</p>
+    <div class="modal-options">
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="0" data-keep="false">Open (?)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="false">Caress tenderly (+sanity)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="1" data-sanity="0" data-keep="false">Lick (+water)</a>
+      
+      <a href="#" class="btn modal-btn" data-food="0" data-water="0" data-sanity="1" data-keep="true">Keep</a>
+      
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Need to bundle these up nicely -->
 <script src="assets/components/jquery/jquery.min.js"></script>

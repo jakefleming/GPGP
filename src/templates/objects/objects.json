@@ -1,0 +1,135 @@
+{
+  "objects": [{
+    "name": "oil-barrel-1",
+    "displayTitle": "Oil Barrel",
+    "description": "Some stuff about oil barrels...",
+    "size": "lg",
+    "bob": "heavy",
+    "rotate": "45",
+    "image": "objects/object_oil-barrel.svg",
+    "options": [{
+      "text": "Eat what you find inside (++food)",
+      "food": 2,
+      "water": 0,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Caress tenderly (+sanity)",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": false
+    }, {
+      "text": "Drink from (++water)",
+      "food": 0,
+      "water": 2,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Keep",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": true
+    }]
+  }, {
+    "name": "seaweed-1",
+    "displayTitle": "Seaweed",
+    "description": "Some stuff about seaweed...",
+    "size": "sm",
+    "bob": "normal",
+    "rotate": "normal",
+    "image": "objects/object_seaweed.svg",
+    "options": [{
+      "text": "Eat what you find inside (+food)",
+      "food": 1,
+      "water": 0,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Caress tenderly (+sanity)",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": false
+    }, {
+      "text": "Drink from (++water)",
+      "food": 0,
+      "water": 2,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Keep",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": true
+    }]
+  }, {
+    "name": "eco-water-1",
+    "displayTitle": "Eco Water",
+    "description": "Saving the earth, one plastic bottle at a time...",
+    "size": "sm",
+    "bob": "heavy",
+    "rotate": "45",
+    "image": "objects/object_eco-water.svg",
+    "options": [{
+      "text": "Drink (++water)",
+      "food": 0,
+      "water": 2,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Scream at, then apologize to (++sanity)",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": false
+    }, {
+      "text": "Tell joke to (+sanity)",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": false
+    }, {
+      "text": "Keep",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": true
+    }]
+  }, {
+    "name": "treasure-chest-1",
+    "displayTitle": "Treasure Chest",
+    "description": "Some stuff about treasure...",
+    "size": "lg",
+    "bob": "heavy",
+    "rotate": "normal",
+    "image": "objects/object_treasure-chest.svg",
+    "options": [{
+      "text": "Open (?)",
+      "food": 0,
+      "water": 0,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Caress tenderly (+sanity)",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": false
+    }, {
+      "text": "Lick (+water)",
+      "food": 0,
+      "water": 1,
+      "sanity": 0,
+      "keep": false
+    }, {
+      "text": "Keep",
+      "food": 0,
+      "water": 0,
+      "sanity": 1,
+      "keep": true
+    }]
+  }]
+}
