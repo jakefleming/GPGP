@@ -248,11 +248,21 @@ var scene = ( function() {
   });
 
   $( '.modal-btn' ).click( function() {
-    var food = $( this ).data( 'food' );
-    var water = $( this ).data( 'water' );
-    var sanity = $( this ).data( 'sanity' );
+    // Change this value to reflect the height of the icon + padding
+    var statUnit = 29;
 
-    
-  })
+    var food = $( this ).data( 'food' );
+    var foodCard = $( '.stat--food>.stat__inner');
+
+    var water = $( this ).data( 'water' );
+    var waterCard = $( '.stat--water>.stat__inner');
+
+    var sanity = $( this ).data( 'sanity' );
+    var sanityCard = $( '.stat--sanity>.stat__inner');
+
+    foodCard.css({ 'height': foodCard.height() + (statUnit * food) });
+    waterCard.css({ 'height': waterCard.height() + (statUnit * water) });
+    sanityCard.css({ 'height': sanityCard.height() + (statUnit * sanity) });
+  });
 
 })(jQuery, window, document);

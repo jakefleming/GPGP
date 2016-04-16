@@ -1286,19 +1286,20 @@ body {
           mask-image: url(../../assets/img/objects/object_shark.svg); }
 
 .btn {
-  display: inline-block;
-  padding: 1rem 2rem;
+  display: block;
+  padding: 1.5rem 2rem;
   background: #46afdb;
   text-align: center;
   border-radius: 2px;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  margin-bottom: 1rem; }
   .btn:hover {
     background: #31a6d7; }
 
 .ui-stat-container {
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 32px;
   overflow: hidden;
   z-index: 9;
@@ -1311,14 +1312,11 @@ body {
   float: left;
   margin-right: 8px;
   width: 96px;
-  height: 144px;
-  padding: 16px 0;
+  padding-top: 16px;
   transition: .33s; }
-  .stat:hover {
-    margin-top: -5px; }
   .stat__inner {
     width: 36px;
-    height: 112px;
+    height: 29px;
     margin: 0 auto;
     background-repeat: repeat-y; }
   .stat--food .stat__inner {
