@@ -260,9 +260,18 @@ var scene = ( function() {
     var sanity = $( this ).data( 'sanity' );
     var sanityCard = $( '.stat--sanity>.stat__inner');
 
+    var keep = $( this ).data( 'keep' );
+
+    // Change states based on the option that was selected
     foodCard.css({ 'height': foodCard.height() + (statUnit * food) });
     waterCard.css({ 'height': waterCard.height() + (statUnit * water) });
     sanityCard.css({ 'height': sanityCard.height() + (statUnit * sanity) });
+
+    // Put in inventory?
+    if( keep == true ) {
+      // Put the thing in inventory
+      console.log( 'thing is inventory' );
+    }
   });
 
 })(jQuery, window, document);
