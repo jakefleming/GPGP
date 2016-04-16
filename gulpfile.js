@@ -32,6 +32,7 @@ var config = {
     'src/js/vendor/underscore-min.js',
     'src/js/vendor/velocity.min.js',
     'src/js/modules/_config.js',
+    'src/js/modules/_tools.js',
     'src/js/modules/*',
     'src/js/scripts.js'
   ],
@@ -95,6 +96,6 @@ gulp.task( 'html', function() {
 
 gulp.task('default', ['css', 'js', 'html', 'browser-sync'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);
-    gulp.watch("src/js/*.js", ['js']);
+    gulp.watch("src/js/**/*", ['js']);
     gulp.watch("src/templates/**/*.+(html|json)", ['html']);
 });

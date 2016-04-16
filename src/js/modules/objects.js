@@ -11,10 +11,10 @@ var objects = ( function($) {
     //   );
     // },
     spreadObjects: function() {
-      // var rigidBodies = [
-      //   [ 40, 40, 20, 20 ],
-      //   [ 0, 90, 35, 10 ]
-      // ];
+      var rigidBodies = [
+        [ 40, 40, 20, 20 ],
+        [ 0, 90, 35, 10 ]
+      ];
 
       $( '.object-container' ).each( function() {
 
