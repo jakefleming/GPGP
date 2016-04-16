@@ -6,7 +6,7 @@ var gulp            = require('gulp'),
     jshint          = require('gulp-jshint'),
     header          = require('gulp-header'),
     rename          = require('gulp-rename'),
-    minifyCSS       = require('gulp-minify-css'),
+    cleanCSS        = require('gulp-clean-css'),
     nunjucksRender  = require('gulp-nunjucks-render'),
     data            = require('gulp-data'),
     concat          = require('gulp-concat'),
@@ -54,7 +54,7 @@ gulp.task( 'css', function() {
   .pipe(sass({errLogToConsole: true}))
   .pipe(autoprefixer('last 4 version'))
   .pipe(gulp.dest('dist/assets/css'))
-  .pipe(minifyCSS())
+  .pipe(cleanCSS())
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { package : package }))
   .pipe(gulp.dest('dist/assets/css'))
@@ -72,7 +72,7 @@ gulp.task( 'js', ['clean:js'], function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('dist/assets/js'))
-    .pipe(browserSync.reload({stream:true, once: true}));
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task( 'clean:js', function() {
