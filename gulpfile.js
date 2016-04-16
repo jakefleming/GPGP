@@ -70,7 +70,7 @@ gulp.task( 'js', ['clean:js'], function() {
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });

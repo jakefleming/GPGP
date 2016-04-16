@@ -30,7 +30,10 @@
     "jshint": "^2.8.0"
   },
   "scripts": {
-    "prestart": "npm install",
+    "prestart": [
+      "nvm use",
+      "npm install"
+    ],
     "start": "gulp"
   }
 }
