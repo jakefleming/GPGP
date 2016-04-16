@@ -27,6 +27,10 @@ var banner = [
 
 var config = {
   jsPaths: [
+    'src/js/vendor/modernizr/modernizr.js',
+    'src/js/vendor/jquery/jquery.min.js',
+    'src/js/vendor/underscore-min.js',
+    'src/js/vendor/velocity.min.js',
     'src/js/modules/_config.js',
     'src/js/modules/*',
     'src/js/scripts.js'
