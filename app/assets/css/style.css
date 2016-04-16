@@ -1012,6 +1012,20 @@ th {
   -webkit-filter: hue-rotate(-132deg) brightness(0.9);
           filter: hue-rotate(-132deg) brightness(0.9); }
 
+.object-container--life-raft-1 .object, .object-container--life-raft-1 .object-submerged {
+  background-image: url(../../assets/img/objects/object_life-raft.svg); }
+
+.object-container--life-raft-1 .object-submerged {
+  -webkit-mask-image: url(../../assets/img/objects/object_life-raft.svg);
+          mask-image: url(../../assets/img/objects/object_life-raft.svg); }
+
+.object-container--log-raft-1 .object, .object-container--log-raft-1 .object-submerged {
+  background-image: url(../../assets/img/objects/object_log-raft.svg); }
+
+.object-container--log-raft-1 .object-submerged {
+  -webkit-mask-image: url(../../assets/img/objects/object_log-raft.svg);
+          mask-image: url(../../assets/img/objects/object_log-raft.svg); }
+
 /* <div class="object-container object-container--lg object-container--oil-barrel bob-heavy rotate-45">
     <div class="object-rig">
       <div class="object-rig__bob">

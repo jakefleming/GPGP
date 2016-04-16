@@ -176,3 +176,21 @@
     filter: hue-rotate(-132deg) brightness(.9);
   }
 }
+
+.object-container--life-raft-1 {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_life-raft.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_life-raft.svg);
+  }
+}
+
+.object-container--log-raft-1 {
+  .object, .object-submerged {
+    background-image: url(../../assets/img/objects/object_log-raft.svg);
+  }
+  .object-submerged {
+    mask-image: url(../../assets/img/objects/object_log-raft.svg);
+  }
+}
