@@ -1164,55 +1164,6 @@ th {
           transform: translateX(-50%);
   width: 32px; }
 
-.object-container--seaweed-1 .object, .object-container--seaweed-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_seaweed.svg); }
-
-.object-container--seaweed-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_seaweed.svg);
-          mask-image: url(../../assets/img/objects/object_seaweed.svg); }
-
-.object-container--eco-water-1 .object, .object-container--eco-water-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_eco-water.svg); }
-
-.object-container--eco-water-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_eco-water.svg);
-          mask-image: url(../../assets/img/objects/object_eco-water.svg); }
-
-.object-container--oil-barrel-1 .object, .object-container--oil-barrel-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
-
-.object-container--oil-barrel-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_oil-barrel.svg);
-          mask-image: url(../../assets/img/objects/object_oil-barrel.svg); }
-
-.object-container--life-raft-1 .object, .object-container--life-raft-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_life-raft.svg); }
-
-.object-container--life-raft-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_life-raft.svg);
-          mask-image: url(../../assets/img/objects/object_life-raft.svg); }
-
-.object-container--log-raft-1 .object, .object-container--log-raft-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_log-raft.svg); }
-
-.object-container--log-raft-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_log-raft.svg);
-          mask-image: url(../../assets/img/objects/object_log-raft.svg); }
-
-.object-container--treasure-chest-1 .object, .object-container--treasure-chest-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_treasure-chest.svg); }
-
-.object-container--treasure-chest-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_treasure-chest.svg);
-          mask-image: url(../../assets/img/objects/object_treasure-chest.svg); }
-
-.object-container--shark-1 .object, .object-container--shark-1 .object-submerged {
-  background-image: url(../../assets/img/objects/object_shark.svg); }
-
-.object-container--shark-1 .object-submerged {
-  -webkit-mask-image: url(../../assets/img/objects/object_shark.svg);
-          mask-image: url(../../assets/img/objects/object_shark.svg); }
-
 .btn {
   display: block;
   padding: 1.5rem 2rem;

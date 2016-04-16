@@ -4,7 +4,10 @@
     <div class="object-submerged-container">
       <div class="object-rig__bob">
         <div class="object-rig__rotate">
-          <div class="object-submerged"></div>
+          <div class="object-submerged" style="
+          background-image: url('assets/img/{{ object.image }}');
+          mask-image: url('assets/img/{{ object.image }}');
+          -webkit-mask-image: url('assets/img/{{ object.image }}');"></div>
         </div>
       </div>
     </div>
@@ -13,7 +16,7 @@
     <div class="object-mask">
       <div class="object-rig__bob">
         <div class="object-rig__rotate">
-          <div class="object"></div>
+          <div class="object" style="background-image: url('assets/img/{{ object.image }}');"></div>
         </div>
       </div>
     </div>
