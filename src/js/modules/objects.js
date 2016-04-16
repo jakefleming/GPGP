@@ -10,8 +10,12 @@ var objects = ( function($) {
     //     (a.x > (b.x + b.width))
     //   );
     // },
+    isAHit: function() {
+      return true;
+    },
     spreadObjects: function() {
       var rigidBodies = [
+        // X, Y, Width, Height
         [ 40, 40, 20, 20 ],
         [ 0, 90, 35, 10 ]
       ];
@@ -22,11 +26,13 @@ var objects = ( function($) {
         var top   = tools.randomRange( 10, 90, 38, 68 );
         var left  = tools.randomRange( 10, 90, 38, 68 );
 
-        // for( var i = 0; i < rigidBodies.length; i++ ) {
-        //   var rB = rigidBodies[i];
-        //
-        //
+        // do {
+        //   for( var i = 0; i < rigidBodies.length; i++ ) {
+        //     var rB = rigidBodies[i];
+        //     console.log(rB);
+        //   }
         // }
+        // while( objects.isAHit() );
 
         // console.log( 'top is a ' + objects.isAHit( top, rigidBodies ) );
         var z     = Math.floor( top ) + ( $(this).height() / 8);

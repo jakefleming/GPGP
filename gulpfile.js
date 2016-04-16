@@ -10,6 +10,8 @@ var gulp            = require('gulp'),
     nunjucksRender  = require('gulp-nunjucks-render'),
     data            = require('gulp-data'),
     concat          = require('gulp-concat'),
+    del             = require('del'),
+    sourcemaps      = require('gulp-sourcemaps'),
     package         = require('./package.json');
 
 
@@ -59,18 +61,25 @@ gulp.task( 'css', function() {
   .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task( 'js', function() {
+gulp.task( 'js', ['clean:js'], function() {
   gulp.src( config.jsPaths )
+    .pipe(sourcemaps.init())
     .pipe(jshint('.jshintrc'))
     .pipe(concat('scripts.js'))
     .pipe(jshint.reporter('default'))
-    .pipe(header(banner, { package : package }))
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
-    .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
+});
+
+gulp.task( 'clean:js', function() {
+  return del([
+    './dist/assets/js/scripts.js',
+    './dist/assets/js/scripts.min.js',
+  ]);
 });
 
 gulp.task( 'browser-sync', function() {
