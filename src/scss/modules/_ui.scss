@@ -1,15 +1,16 @@
 .btn {
   display: block;
   padding: 1.5rem 2rem;
-  background: $color-sea;
+  //background: $color-sea;
   text-align: center;
   border-radius: 2px;
   text-decoration: none;
-  color: #fff;
+  color: $color-gray-dark;
   margin-bottom: 1rem;
-
+  border: 1px solid transparentize($color-gray,.8);
+  transition: background .33s;
   &:hover {
-    background: darken($color-sea, 5%);
+    background: transparentize($color-gray, .9);
   }
 }
 
@@ -21,6 +22,14 @@
   overflow: hidden;
   z-index: 9;
   padding-top: 32px;
+
+  /* Just getting this to work. Will change to be more efficient. */
+  width: 100%;
+  height: 100%;
+
+  /* Ignore z-index of stat container for debugging and interactions */
+  pointer-events: none;
+
 }
 
 .stat {
@@ -33,6 +42,11 @@
   // height: 144px;
   padding-top: 16px;
   transition: .33s;
+
+  /* Hacking this for now. Change soon. */
+  position: absolute;
+  bottom: 0;
+
   &:hover {
     // margin-top: -5px;
   }
@@ -43,17 +57,20 @@
     background-repeat: repeat-y;
   }
   &--food {
-      .stat__inner {
+    left: 0;
+    .stat__inner {
       background-image: url(../../assets/img/ui/icons/icon_food.svg);
     }
   }
   &--water {
-      .stat__inner {
+    left: 104px;
+    .stat__inner {
       background-image: url(../../assets/img/ui/icons/icon_water.svg);
     }
   }
   &--sanity{
-      .stat__inner {
+    left: 208px;
+    .stat__inner {
       background-image: url(../../assets/img/ui/icons/icon_sanity.svg);
     }
   }

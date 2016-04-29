@@ -1169,25 +1169,27 @@ th {
   text-shadow: none; }
 
 .modal {
-  width: 50vw;
-  height: 80vh;
+  width: 100%;
   top: 10vh;
-  left: 25vw;
+  left: 50%;
   position: absolute;
-  background: #fff;
+  background: linear-gradient(to bottom, #FFF 75%, #CCF0EF 100%);
   z-index: 999;
-  padding: 1.5rem;
+  padding: 3rem;
   transition: all 0.2s ease-in;
-  -webkit-transform: translate(0, -150%);
-      -ms-transform: translate(0, -150%);
-          transform: translate(0, -150%); }
+  border-radius: .25rem;
+  -webkit-transform: translate(-50%, -150%);
+      -ms-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+  max-width: 500px;
+  box-shadow: 0 6px 48px #196080; }
   .modal--show {
     transition: all 0.2s ease-out;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0); }
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
   .modal-image {
-    width: 50%;
+    width: 33%;
     margin: 0 auto; }
     .modal-image img {
       max-width: 100%; }
@@ -1201,7 +1203,7 @@ th {
   position: absolute;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(25, 96, 128, 0.5);
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s ease-in; }
@@ -1218,6 +1220,33 @@ th {
   font-weight: bold;
   text-decoration: none;
   color: #fff; }
+
+.modal-options .btn:last-child {
+  margin-bottom: 0; }
+
+.modal .object-title {
+  color: #074059;
+  font-family: jubilat, garamond, serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: .25px; }
+
+.modal .object-description {
+  color: #5B99B5;
+  text-align: center;
+  margin-top: .5rem;
+  margin-bottom: 3rem;
+  font-size: 1.25em; }
+
+.modal-content__divider {
+  margin-bottom: 3rem;
+  padding: 0 25%; }
+  .modal-content__divider-inner {
+    background-color: rgba(91, 153, 181, 0.1);
+    height: 1px; }
 
 .pause-animation * {
   transition: none !important;
@@ -1948,14 +1977,15 @@ th {
 .btn {
   display: block;
   padding: 1.5rem 2rem;
-  background: #46afdb;
   text-align: center;
   border-radius: 2px;
   text-decoration: none;
-  color: #fff;
-  margin-bottom: 1rem; }
+  color: #074059;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(91, 153, 181, 0.2);
+  transition: background .33s; }
   .btn:hover {
-    background: #31a6d7; }
+    background: rgba(91, 153, 181, 0.1); }
 
 .ui-stat-container {
   position: absolute;
@@ -1963,7 +1993,12 @@ th {
   left: 32px;
   overflow: hidden;
   z-index: 9;
-  padding-top: 32px; }
+  padding-top: 32px;
+  /* Just getting this to work. Will change to be more efficient. */
+  width: 100%;
+  height: 100%;
+  /* Ignore z-index of stat container for debugging and interactions */
+  pointer-events: none; }
 
 .stat {
   background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
@@ -1973,18 +2008,27 @@ th {
   margin-right: 8px;
   width: 96px;
   padding-top: 16px;
-  transition: .33s; }
+  transition: .33s;
+  /* Hacking this for now. Change soon. */
+  position: absolute;
+  bottom: 0; }
   .stat__inner {
     width: 36px;
     height: 29px;
     margin: 0 auto;
     background-repeat: repeat-y; }
-  .stat--food .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_food.svg); }
-  .stat--water .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_water.svg); }
-  .stat--sanity .stat__inner {
-    background-image: url(../../assets/img/ui/icons/icon_sanity.svg); }
+  .stat--food {
+    left: 0; }
+    .stat--food .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_food.svg); }
+  .stat--water {
+    left: 104px; }
+    .stat--water .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_water.svg); }
+  .stat--sanity {
+    left: 208px; }
+    .stat--sanity .stat__inner {
+      background-image: url(../../assets/img/ui/icons/icon_sanity.svg); }
 
 .ui-object-card-container {
   position: absolute;
@@ -2058,7 +2102,9 @@ body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
   background: #46afdb;
   /* Old browsers */
-  background: linear-gradient(to bottom, #46afdb 0, #59f0e8 100%); }
+  background: linear-gradient(to bottom, #46afdb 0, #59f0e8 100%);
+  font-family: brandon-grotesque, Helvetica, sans-serif;
+  font-weight: 100; }
 
 .dev-mode {
   display: none; }

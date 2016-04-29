@@ -29,8 +29,11 @@
     <img src="assets/img/{{ object.image }}" alt="">
   </div>
   <div class="modal-content">
-    <h3>{{ object.displayTitle }}</h3>
-    <p>{{ object.description }}</p>
+    <h3 class="object-title">{{ object.displayTitle }}</h3>
+    <p class="object-description">{{ object.description }}</p>
+    <div class="modal-content__divider">
+      <!-- <div class="modal-content__divider-inner"></div> -->
+    </div>
     <div class="modal-options">
       {% for option in object.options %}
       <a href="#" class="btn modal-btn" data-food="{{ option.food }}" data-water="{{ option.water }}" data-sanity="{{ option.sanity }}" data-keep="{{ option.keep }}">{{ option.text }}</a>

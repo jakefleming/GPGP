@@ -6,6 +6,9 @@ $scale:       1.5;
 $base-font:   16px;
 $base-lh:     $base-font * $scale;
 
+$heading-font-family: jubilat, garamond, serif;
+$body-font-family:    brandon-grotesque, Helvetica, sans-serif;
+
 $base-radius: $base-font/4;
 
 $wave-height: $base-lh;
@@ -15,6 +18,11 @@ $color-glow:  #B7FEDD;
 
 $color-aqua: #59f0e8;
 $color-sea: #46afdb;
+
+$color-coral: #FC2AA1; //HOT PINK!!!!
+
+$color-gray:      #5B99B5;
+$color-gray-dark: #074059;
 
 $color-submerged-light: #D0AEE4;
 $color-submerged-dark: #007A9B;

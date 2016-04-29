@@ -1,24 +1,24 @@
 .modal {
-  width: 50vw;
-  height: 80vh;
+  width: 100%;
   top: 10vh;
-  left: 25vw;
+  left: 50%;
   position: absolute;
-  background: #fff;
+  background: linear-gradient(to bottom, #FFF 75%, #CCF0EF 100%);
   z-index: 999;
-  padding: 1.5rem;
+  padding: 3rem;
   transition: all 0.2s ease-in;
-  transform: translate(0 , -150%);
-
+  border-radius: .25rem;
+  transform: translate(-50%,-150%);
+  max-width: 500px;
+  box-shadow: 0 6px 48px #196080;
   &--show {
     transition: all 0.2s ease-out;
-    transform: translate(0 , 0);
+    transform: translate(-50% , 0);
   }
 
   &-image {
-    width: 50%;
+    width: 33%;
     margin: 0 auto;
-    
     img {
       max-width: 100%;
     }
@@ -34,7 +34,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: rgba(0,0,0,0.65);
+  background: transparentize(#196080,.5);
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s ease-in;
@@ -54,4 +54,39 @@
   font-weight: bold;
   text-decoration: none;
   color: #fff;
+}
+
+.modal-options{
+  .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal .object-title {
+  color: $color-gray-dark;
+  font-family: $heading-font-family;
+  font-size: 3rem;
+  text-align: center;
+  //text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: .25px;
+}
+
+.modal .object-description {
+  color: $color-gray;
+  text-align: center;
+  margin-top: .5rem;
+  margin-bottom: 3rem;
+  font-size: 1.25em;
+}
+
+.modal-content__divider {
+  margin-bottom: 3rem;
+  padding: 0 25%;
+  &-inner {
+    background-color: transparentize($color-gray, .9);
+    height: 1px;
+  }
 }
