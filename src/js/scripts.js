@@ -1,7 +1,8 @@
 // IIFE
 (function ($, window, document, undefined) {
-
   'use strict';
+
+  // var storage = require( 'storagejs' );
 
   scene.setup();
   waves.spreadWaves();
