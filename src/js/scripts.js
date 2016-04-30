@@ -4,6 +4,12 @@
 
   // var storage = require( 'storagejs' );
 
+  /*global
+    scene,
+    waves,
+    objects
+  */
+  
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
