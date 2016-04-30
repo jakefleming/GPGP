@@ -13,12 +13,27 @@ var objects = ( function($) {
     isAHit: function() {
       return true;
     },
+    startSpawning: function() {
+      setTimeout( function() {
+
+        var roll = Math.random();
+        if( config.objSpawnChance <= roll ) {
+          objects.spawnNewObj();
+        }
+
+        // Reset timer
+        objects.startSpawning();
+      }, config.objSpawnSpeed);
+    },
+    spawnNewObj: function() {
+
+    },
     spreadObjects: function() {
-      var rigidBodies = [
-        // X, Y, Width, Height
-        [ 40, 40, 20, 20 ],
-        [ 0, 90, 35, 10 ]
-      ];
+      // var rigidBodies = [
+      //   // X, Y, Width, Height
+      //   [ 40, 40, 20, 20 ],
+      //   [ 0, 90, 35, 10 ]
+      // ];
 
       $( '.object-container' ).each( function() {
 

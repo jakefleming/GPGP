@@ -1374,6 +1374,42 @@ th {
   100% {
     background-position: 300% 100%; } }
 
+@-webkit-keyframes float-up {
+  0% {
+    top: 100%; }
+  37% {
+    top: 0%; }
+  55% {
+    top: 25%; }
+  73% {
+    top: 0%; }
+  82% {
+    top: 7%; }
+  91% {
+    top: 0%; }
+  96% {
+    top: 2%; }
+  100% {
+    top: 0; } }
+
+@keyframes float-up {
+  0% {
+    top: 100%; }
+  37% {
+    top: 0%; }
+  55% {
+    top: 25%; }
+  73% {
+    top: 0%; }
+  82% {
+    top: 7%; }
+  91% {
+    top: 0%; }
+  96% {
+    top: 2%; }
+  100% {
+    top: 0; } }
+
 .bob-normal {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
@@ -1465,6 +1501,22 @@ th {
           animation-iteration-count: infinite;
   -webkit-animation-name: rotate-315;
           animation-name: rotate-315;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+
+.object-float .object-rig__bob {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: float-up;
+          animation-name: float-up;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   backface-visibility: hidden;
@@ -1934,11 +1986,12 @@ th {
 
 .object-container:after {
   content: '';
-  width: 100%;
+  width: 120%;
   height: 10%;
   background: #1EB9D4;
   border-radius: 50%;
   top: 50%;
+  left: -10%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1973,6 +2026,18 @@ th {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 32px; }
+
+.object-sunk .object-rig, .object-sunk:before, .object-sunk:after {
+  transition: opacity 1s ease-in;
+  opacity: 0; }
+
+.object-sunk .object-rig__bob {
+  transition: top 1s ease-in;
+  top: 100%; }
+
+.object-float .object-rig, .object-float:before, .object-float:after {
+  transition: opacity 1s ease-in;
+  opacity: 1; }
 
 .btn {
   display: block;

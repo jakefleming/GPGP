@@ -9,10 +9,11 @@
     waves,
     objects
   */
-  
+
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
+  // objects.startSpawning();
 
   // Events
 

@@ -100,6 +100,40 @@
   100% {background-position: 300% 100%}
 }
 
+@keyframes float-up {
+  0% {
+    top: 100%;
+  }
+
+  37% {
+    top: 0%;
+  }
+
+  55% {
+    top: 25%;
+  }
+
+  73% {
+    top: 0%;
+  }
+
+  82% {
+    top: 7%;
+  }
+
+  91% {
+    top: 0%;
+  }
+
+  96% {
+    top: 2%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
 .bob-normal {
   @include animated(bob-normal, 4s);
   .object-rig__bob {
@@ -129,6 +163,12 @@
 .rotate-315 {
   .object-rig__rotate {
     @include animated(rotate-315, 4s);
+  }
+}
+
+.object-float {
+  .object-rig__bob {
+    @include animated(float-up, 4s, 0, 1);
   }
 }
 

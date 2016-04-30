@@ -1438,7 +1438,9 @@ var config = ( function() {
       '<div class="wave b"></div><div class="wave a"></div><div class="wave b"></div>',
       '<div class="wave c"></div><div class="wave d"></div><div class="wave b"></div>'
     ],
-    'waveTiming': 4
+    'waveTiming': 4,
+    'objSpawnChance': 0.5,
+    'objSpawnSpeed': 1000, //ms
   };
 }());
 
@@ -1491,12 +1493,27 @@ var objects = ( function($) {
     isAHit: function() {
       return true;
     },
+    startSpawning: function() {
+      setTimeout( function() {
+
+        var roll = Math.random();
+        if( config.objSpawnChance <= roll ) {
+          objects.spawnNewObj();
+        }
+
+        // Reset timer
+        objects.startSpawning();
+      }, config.objSpawnSpeed);
+    },
+    spawnNewObj: function() {
+
+    },
     spreadObjects: function() {
-      var rigidBodies = [
-        // X, Y, Width, Height
-        [ 40, 40, 20, 20 ],
-        [ 0, 90, 35, 10 ]
-      ];
+      // var rigidBodies = [
+      //   // X, Y, Width, Height
+      //   [ 40, 40, 20, 20 ],
+      //   [ 0, 90, 35, 10 ]
+      // ];
 
       $( '.object-container' ).each( function() {
 
@@ -1674,10 +1691,11 @@ var waves = ( function($) {
     waves,
     objects
   */
-  
+
   scene.setup();
   waves.spreadWaves();
   objects.spreadObjects();
+  // objects.startSpawning();
 
   // Events
 
