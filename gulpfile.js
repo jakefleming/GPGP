@@ -88,7 +88,8 @@ gulp.task( 'browser-sync', function() {
   browserSync.init(null, {
     server: {
       baseDir: "dist"
-    }
+    },
+    browser: "google chrome"
   });
 });
 

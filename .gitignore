@@ -1,8 +1,7 @@
 ## Generated files
 app/assets/css/style.min.css
-app/assets/css/maps/style.min.css.map
 app/assets/js/scripts.min.js
-app/assets/js/maps/scripts.min.js.map
+*.map
 
 ## Node.js
 lib-cov
