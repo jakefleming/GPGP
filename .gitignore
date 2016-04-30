@@ -1,7 +1,7 @@
 ## Generated files
-*.min.css
-*.min.js
-*.map
+dist/**/*.min.css
+dist/**/*.min.js
+dist/**/*.map
 
 ## Node.js
 lib-cov
