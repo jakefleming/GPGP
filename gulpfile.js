@@ -51,12 +51,14 @@ function requireUncached( $module ) {
 
 gulp.task( 'css', function() {
   return gulp.src('src/scss/style.scss')
+  .pipe(sourcemaps.init())
   .pipe(sass({errLogToConsole: true}))
   .pipe(autoprefixer('last 4 version'))
   .pipe(gulp.dest('dist/assets/css'))
   .pipe(cleanCSS())
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { package : package }))
+  .pipe(sourcemaps.write('maps'))
   .pipe(gulp.dest('dist/assets/css'))
   .pipe(browserSync.reload({stream:true}));
 });
