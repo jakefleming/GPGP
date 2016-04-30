@@ -1,6 +1,6 @@
 ## Generated files
-app/assets/css/style.min.css
-app/assets/js/scripts.min.js
+*.min.css
+*.min.js
 *.map
 
 ## Node.js
