@@ -1,13 +1,13 @@
 {% for object in objects %}
-<div data-modal="{{ object.name }}" class="object-sunk object-container--{{ object.size }} object-container--{{ object.name }} bob-{{ object.bob }} rotate-{{ object.rotate }} object-container modal-trigger object-container--new">
+<div data-modal="{{ object.name }}" class="object-float object-container--{{ object.size }} object-container--{{ object.name }} bob-{{ object.bob }} rotate-{{ object.rotate }} object-container modal-trigger object-container--new">
   <div class="object-rig">
     <div class="object-submerged-container">
       <div class="object-rig__bob">
         <div class="object-rig__rotate">
           <div class="object-submerged" style="
-          background-image: url('assets/img/{{ object.image }}');
-          mask-image: url('assets/img/{{ object.image }}');
-          -webkit-mask-image: url('assets/img/{{ object.image }}');"></div>
+          background-image: url('assets/img/objects/{{ object.image }}');
+          mask-image: url('assets/img/objects/{{ object.image }}');
+          -webkit-mask-image: url('assets/img/objects/{{ object.image }}');"></div>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
     <div class="object-mask">
       <div class="object-rig__bob">
         <div class="object-rig__rotate">
-          <div class="object" style="background-image: url('assets/img/{{ object.image }}');"></div>
+          <div class="object" style="background-image: url('assets/img/objects/{{ object.image }}');"></div>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
 <div class="modal modal-container" id="{{ object.name }}">
   <a href="#" class="modal-close">&times;</a>
   <div class="modal-image">
-    <img src="assets/img/{{ object.image }}" alt="">
+    <img src="assets/img/objects/{{ object.image }}" alt="">
   </div>
   <div class="modal-content">
     <h3 class="object-title">{{ object.displayTitle }}</h3>
