@@ -5,15 +5,20 @@
   // var storage = require( 'storagejs' );
 
   /*global
+    _config,
+    _tools,
     scene,
     waves,
-    objects
+    objects,
+    storage
   */
 
   scene.setup();
   waves.spreadWaves();
-  objects.spreadObjects();
-  // objects.startSpawning();
+  // objects.spreadObjects();
+  objects.startSpawning();
+
+
 
   // Events
 
@@ -48,18 +53,10 @@
     var sanity = $( this ).data( 'sanity' );
     var sanityCard = $( '.stat--sanity>.stat__inner');
 
-    var keep = $( this ).data( 'keep' );
-
     // Change states based on the option that was selected
     foodCard.css({ 'height': foodCard.height() + (statUnit * food) });
     waterCard.css({ 'height': waterCard.height() + (statUnit * water) });
     sanityCard.css({ 'height': sanityCard.height() + (statUnit * sanity) });
-
-    // Put in inventory?
-    if( keep === true ) {
-      // Put the thing in inventory
-      console.log( 'thing is inventory' );
-    }
   });
 
 })(jQuery, window, document);

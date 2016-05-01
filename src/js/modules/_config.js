@@ -14,7 +14,7 @@ var config = ( function() {
       '<div class="wave c"></div><div class="wave d"></div><div class="wave b"></div>'
     ],
     'waveTiming': 4,
-    'objSpawnChance': 0.5,
-    'objSpawnSpeed': 1000, //ms
+    'objSpawnSpeed': 5000, //every X ms, objects have a chance to spawn based on objSpawnChance
+    'objSpawnChance': 0.5
   };
 }());

@@ -1888,7 +1888,9 @@ th {
     </div>
   </div> */
 .object-container {
-  position: absolute; }
+  position: absolute;
+  left: -100vw;
+  top: 200vh; }
 
 .object-container--xs {
   height: 32px;
