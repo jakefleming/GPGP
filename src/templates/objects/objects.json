@@ -99,5 +99,55 @@
       "water": 1,
       "sanity": 0
     }]
+  }, {
+    "name": "plastic-bag-1",
+    "displayTitle": "Plastic Bag",
+    "description": "Some stuff about plastic...",
+    "rarity": 2,
+    "size": "md",
+    "bob": "normal",
+    "rotate": "45",
+    "image": "objects/object_plastic-bag.svg",
+    "options": [{
+      "text": "Wear",
+      "food": 0,
+      "water": 0,
+      "sanity": 1
+    }, {
+      "text": "Ingest",
+      "food": 1,
+      "water": -1,
+      "sanity": -1
+    }, {
+      "text": "Lick",
+      "food": 0,
+      "water": 1,
+      "sanity": 0
+    }]
+  }, {
+    "name": "recyclable-bag-1",
+    "displayTitle": "Recyclable Bag",
+    "description": "Recycling is important...",
+    "rarity": 2,
+    "size": "md",
+    "bob": "normal",
+    "rotate": "45",
+    "image": "objects/object_recyclable-bag.svg",
+    "options": [{
+      "text": "Wear",
+      "food": 0,
+      "water": 0,
+      "sanity": 1
+    }, {
+      "text": "Tear apart and eat",
+      "food": 1,
+      "water": -1,
+      "sanity": -1
+    }, {
+      "text": "Have a conversation with",
+      "food": 0,
+      "water": 0,
+      "sanity": 2
+    }]
   }]
 }
