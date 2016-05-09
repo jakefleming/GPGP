@@ -1439,8 +1439,10 @@ var config = ( function() {
       '<div class="wave c"></div><div class="wave d"></div><div class="wave b"></div>'
     ],
     'waveTiming': 4,
-    'objSpawnSpeed': 5000, //every X ms, objects have a chance to spawn based on objSpawnChance
-    'objSpawnChance': 0.5
+    'objSpawnSpeed': 10000, //every X ms, objects have a chance to spawn based on objSpawnChance
+    'objSpawnChance': 1,
+    'objSinkSpeed': 10000,
+    'objLifetime': 20000
   };
 }());
 
@@ -1494,15 +1496,15 @@ var objects = ( function($) {
       return true;
     },
     startSpawning: function() {
-      setTimeout( function() {
+      setInterval( function() {
 
         var roll = Math.random();
-        if( config.objSpawnChance <= roll ) {
+        if( config.objSpawnChance >= roll ) {
           objects.spawnNewObj();
         }
 
         // Begin again
-        objects.startSpawning();
+        // objects.startSpawning();
       }, config.objSpawnSpeed);
     },
     spawnNewObj: function() {
@@ -1532,37 +1534,83 @@ var objects = ( function($) {
       // TODO: If the object's spawnChance is greater the roll (e.g. roll = 0.5 will select anything with greater than 0.5 chance)
 
       // Select one random item from all objects that qualify
-      var selectedObj = testObj.objects[ Math.round( Math.random() * ( testObj.objects.length - 1 ) ) ];
+      var object = testObj.objects[ Math.round( Math.random() * ( testObj.objects.length - 1 ) ) ];
 
-      // On that selected item, create a new dom element and place it in the scene
-      var e = $("<img />", {
-        src: "assets/img/objects/" + selectedObj.image,
-        "class": "a-class another-class", // you need to quote "class" since it's a reserved keyword
-        alt: selectedObj.name
-      });
+      var imgHeight;
+      if( object.size == "xs" ) {
+        imgHeight = 32;
+      } else if( object.size == "sm" ) {
+        imgHeight = 48;
+      } else if( object.size == "md" ) {
+        imgHeight = 96;
+      } else if( object.size == "lg" ) {
+        imgHeight = 128;
+      } else if( object.size == "xl" ) {
+        imgHeight = 256;
+      }
 
-      var top   = tools.randomRange( 10, 90, 38, 68 );
-      var left  = tools.randomRange( 10, 90, 38, 68 );
-      var z     = Math.floor( top ) + ( e.height() / 8);
-      var delay = config.waveTiming * ( left / 100 ) * -1 + 's';
+      // TODO: Collision detection
+      var imageURL = 'assets/img/objects/' + object.image;
+      var top      = tools.randomRange( 10, 90, 38, 68 ) + 'vh';
+      var left     = tools.randomRange( 10, 90, 38, 68 ) + 'vw';
+      var z        = Math.floor( top ) + ( imgHeight / 8 );
+      var delay    = config.waveTiming * ( left / 100 ) * -1 + 's';
+      var id       = tools.generateUUID();
 
-      e.css({
-        'top': top + 'vh',
-        'left': left + 'vw',
-        'z-index': z,
-        'animation-delay': delay,
-        '-webkit-animation-delay': delay
-      });
+      var el = "<div id='"+ id +"' data-modal='"+ object.name +"' class='object-sunk object-container--"+ object.size +" object-container--"+ object.name +" bob-"+ object.bob +" rotate-"+ object.rotate +" object-container modal-trigger object-container--new' style='top: "+ top +"; left: "+ left +"; z-index: "+ z +"; animation-delay: "+ delay +"; -webkit-animation-delay: "+ delay +";'>\
+        <div class='object-rig'>\
+          <div class='object-submerged-container'>\
+            <div class='object-rig__bob'>\
+              <div class='object-rig__rotate'>\
+                <div class='object-submerged' style='background-image: url("+ imageURL +"); mask-image: url("+ imageURL +"); -webkit-mask-image: url("+ imageURL +");'></div>\
+              </div>\
+            </div>\
+          </div>\
+        </div>\
+        <div class='object-rig'>\
+          <div class='object-mask'>\
+            <div class='object-rig__bob'>\
+              <div class='object-rig__rotate'>\
+                <div class='object' style='background-image: url("+ imageURL +");'></div>\
+              </div>\
+            </div>\
+          </div>\
+        </div>\
+      </div>";
+
+      // TODO: figure out what to do about modals...
+      // <div class='modal modal-container' id='{{ object.name }}'>\
+      //   <a href='#' class='modal-close'>&times;</a>\
+      //   <div class='modal-image'>\
+      //     <img src='assets/img/objects/{{ object.image }}' alt=''>\
+      //   </div>\
+      //   <div class='modal-content'>\
+      //     <h3 class='object-title'>{{ object.displayTitle }}</h3>\
+      //     <p class='object-description'>{{ object.description }}</p>\
+      //     <div class='modal-content__divider'>\
+      //     </div>\
+      //     <div class='modal-options'>\
+      //       {% for option in object.options %}
+      //       <a href='#' class='btn modal-btn' data-food='{{ option.food }}' data-water='{{ option.water }}' data-sanity='{{ option.sanity }}'>{{ option.text }}</a>
+      //       {% endfor %}
+      //     </div>
+      //   </div>
+      // </div>";
 
       // add the element to the body
-      $('.object-wrapper').append(e);
+      $('.object-wrapper').append(el);
 
+      var selectedObj = $('#' + id);
 
+      selectedObj.removeClass('object-sunk').addClass('object-float');
 
-      // call spreadObjects to place it in the scene, avoiding obstacles,
-      // then change the class object-sunk to object-float…
-
-      // for a period of time, then change it back. The delay is related to the spawnChance, so the more common the item, the greater its lifetime
+      // Kill object after 10 seconds
+      setTimeout( function() {
+        selectedObj.removeClass('object-float').addClass('object-sunk');
+        setTimeout( function() {
+          selectedObj.remove();
+        }, config.objSinkSpeed);
+      }, config.objLifetime);
 
     },
     spreadObjects: function() {
