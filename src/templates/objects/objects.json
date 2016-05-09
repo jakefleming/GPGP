@@ -107,7 +107,7 @@
     "size": "md",
     "bob": "normal",
     "rotate": "45",
-    "image": "objects/object_plastic-bag.svg",
+    "image": "object_plastic-bag.svg",
     "options": [{
       "text": "Wear",
       "food": 0,
@@ -132,7 +132,7 @@
     "size": "md",
     "bob": "normal",
     "rotate": "45",
-    "image": "objects/object_recyclable-bag.svg",
+    "image": "object_recyclable-bag.svg",
     "options": [{
       "text": "Wear",
       "food": 0,

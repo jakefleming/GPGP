@@ -5,8 +5,8 @@
   // var storage = require( 'storagejs' );
 
   /*global
-    _config,
-    _tools,
+    config,
+    tools,
     scene,
     waves,
     objects,
@@ -15,8 +15,8 @@
 
   scene.setup();
   waves.spreadWaves();
-  // objects.spreadObjects();
-  objects.startSpawning();
+  objects.spreadObjects();
+  // objects.startSpawning();
 
 
 

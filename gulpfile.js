@@ -12,6 +12,7 @@ var gulp            = require('gulp'),
     concat          = require('gulp-concat'),
     del             = require('del'),
     sourcemaps      = require('gulp-sourcemaps'),
+    plumber         = require('gulp-plumber'),
     package         = require('./package.json');
 
 
@@ -66,6 +67,7 @@ gulp.task( 'css', function() {
 gulp.task( 'js', ['clean:js'], function() {
   gulp.src( config.jsPaths )
     .pipe(sourcemaps.init())
+    .pipe(plumber())
     .pipe(jshint('.jshintrc'))
     .pipe(concat('scripts.js'))
     .pipe(jshint.reporter('default'))

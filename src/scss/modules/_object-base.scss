@@ -142,20 +142,20 @@
 
 
 //shadow setup
-.object-container:after {
-  content: '';
-  width: 120%;
-  height: 10%;
-  background: #1EB9D4;
-  border-radius: 50%;
-  top: 50%;
-  left: -10%;
-  transform: translateY(-50%);
-  mix-blend-mode: multiply;
-  opacity: .5;
-  position: absolute;
-  z-index: 0;
-}
+// .object-container:after {
+//   content: '';
+//   width: 120%;
+//   height: 10%;
+//   background: #1EB9D4;
+//   border-radius: 50%;
+//   top: 50%;
+//   left: -10%;
+//   transform: translateY(-50%);
+//   mix-blend-mode: multiply;
+//   opacity: .5;
+//   position: absolute;
+//   z-index: 0;
+// }
 
 
 

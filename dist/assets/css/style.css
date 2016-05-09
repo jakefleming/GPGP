@@ -22,6 +22,16 @@ body, html {
   min-height: 100vh;
   overflow: hidden; }
 
+/* For dev purposes, illuminates where objects are */
+.test-mask {
+  background: rgba(255, 0, 0, 0.35);
+  display: none;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1192,7 +1202,9 @@ th {
     width: 33%;
     margin: 0 auto; }
     .modal-image img {
-      max-width: 100%; }
+      max-width: 100%;
+      -webkit-filter: drop-shadow(0 8px 10px #ddd);
+              filter: drop-shadow(0 8px 10px #ddd); }
 
 .modal-overlay {
   content: '';
@@ -2013,22 +2025,6 @@ th {
     height: 100%;
     width: 100%;
     z-index: 4; }
-
-.object-container:after {
-  content: '';
-  width: 120%;
-  height: 10%;
-  background: #1EB9D4;
-  border-radius: 50%;
-  top: 50%;
-  left: -10%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  mix-blend-mode: multiply;
-  opacity: .5;
-  position: absolute;
-  z-index: 0; }
 
 .object-container:hover {
   cursor: pointer; }
