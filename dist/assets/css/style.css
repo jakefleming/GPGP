@@ -1378,17 +1378,17 @@ th {
   0% {
     top: 100%; }
   37% {
-    top: 0%; }
+    top: -5%; }
   55% {
-    top: 25%; }
+    top: 35%; }
   73% {
     top: 0%; }
-  82% {
-    top: 7%; }
-  91% {
+  80% {
+    top: 15%; }
+  90% {
     top: 0%; }
-  96% {
-    top: 2%; }
+  94% {
+    top: 7%; }
   100% {
     top: 0; } }
 
@@ -1396,19 +1396,31 @@ th {
   0% {
     top: 100%; }
   37% {
-    top: 0%; }
+    top: -5%; }
   55% {
-    top: 25%; }
+    top: 35%; }
   73% {
     top: 0%; }
-  82% {
-    top: 7%; }
-  91% {
+  80% {
+    top: 15%; }
+  90% {
     top: 0%; }
-  96% {
-    top: 2%; }
+  94% {
+    top: 7%; }
   100% {
     top: 0; } }
+
+@-webkit-keyframes float-down {
+  0% {
+    top: 0; }
+  100% {
+    top: 100%; } }
+
+@keyframes float-down {
+  0% {
+    top: 0; }
+  100% {
+    top: 100%; } }
 
 .bob-normal {
   -webkit-animation-duration: 4s;
@@ -1509,14 +1521,30 @@ th {
 .object-float .object-rig__bob {
   -webkit-animation-delay: 0;
           animation-delay: 0;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-name: float-up;
           animation-name: float-up;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+
+.object-sunk .object-rig__bob {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: float-down;
+          animation-name: float-down;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   backface-visibility: hidden;

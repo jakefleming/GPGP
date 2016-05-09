@@ -18,6 +18,7 @@
   "strict": true,
   "trailing": false,
   "smarttabs": true,
+  "multistr": true,
   "globals" : {
     "jQuery": true,
     "Modernizr": true
