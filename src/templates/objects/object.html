@@ -1,5 +1,5 @@
 {% for object in objects %}
-<div data-modal="{{ object.name }}" class="object-sunk object-container--{{ object.size }} object-container--{{ object.name }} bob-{{ object.bob }} rotate-{{ object.rotate }} object-container modal-trigger object-container--new">
+<div data-modal="{{ object.name }}" data-probability="{{ object.spawnChance }}" data-start="{{ object.spawnHourStart }}" data-end="{{ object.spawnHourEnd }}" class="object-container--{{ object.size }} object-container--{{ object.name }} bob-{{ object.bob }} rotate-{{ object.rotate }} object-container modal-trigger object-container--new">
   <div class="object-rig">
     <div class="object-submerged-container">
       <div class="object-rig__bob">

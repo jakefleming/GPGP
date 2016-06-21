@@ -13,12 +13,12 @@
     storage
   */
 
+  var date = new Date();
+  var currentHour = date.getHours();
+
   scene.setup();
   waves.spreadWaves();
-  objects.spreadObjects();
-  // objects.startSpawning();
-
-
+  objects.spawnObjects( currentHour );
 
   // Events
 
