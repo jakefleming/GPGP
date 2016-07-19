@@ -104,7 +104,7 @@
 .ui-object-card {
   font-family: brandon-grotesque;
   border-radius: $base-radius;
-  width: 100vw;
+  //width: 100vw;
   max-width: 320px;
   margin: 32px auto;
   background: linear-gradient(to bottom,  #ffffff 50%,#ccf0ef 100%);
@@ -169,6 +169,46 @@
   &--oil-barrel {
     .ui-object-card__image {
       background-image: url(../../assets/img/objects/object_oil-barrel.svg);
+    }
+  }
+}
+
+// player
+.ui-player {
+  &-info {
+    opacity: .8;
+    position: absolute;
+    top: -128px;
+    width: 300%;
+    transform: translateX(-33%);
+    text-align: center;
+    z-index: 3;
+  }
+  &-name {
+    color: $color-gray-dark;
+    font-family: $heading-font-family;
+    font-size: $size-sm/2+px;
+  }
+  &-duration {
+    color: white;
+  }
+  &-inventory {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparentize(#196080,.5);
+    z-index: 1000;
+    .ui-object-card {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+      img {
+        width: 75%;
+      }
     }
   }
 }

@@ -2134,7 +2134,6 @@ th {
 .ui-object-card {
   font-family: brandon-grotesque;
   border-radius: 4px;
-  width: 100vw;
   max-width: 320px;
   margin: 32px auto;
   background: linear-gradient(to bottom, #ffffff 50%, #ccf0ef 100%);
@@ -2188,6 +2187,46 @@ th {
 
 .ui-object-card-container--oil-barrel .ui-object-card__image {
   background-image: url(../../assets/img/objects/object_oil-barrel.svg); }
+
+.ui-player-info {
+  opacity: .8;
+  position: absolute;
+  top: -128px;
+  width: 300%;
+  -webkit-transform: translateX(-33%);
+      -ms-transform: translateX(-33%);
+          transform: translateX(-33%);
+  text-align: center;
+  z-index: 3; }
+
+.ui-player-name {
+  color: #074059;
+  font-family: jubilat, garamond, serif;
+  font-size: 24px; }
+
+.ui-player-duration {
+  color: white; }
+
+.ui-player-inventory {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(25, 96, 128, 0.5);
+  z-index: 1000; }
+  .ui-player-inventory .ui-object-card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 32px; }
+    .ui-player-inventory .ui-object-card img {
+      width: 75%; }
 
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46afdb+0,59f0e8+100 */
